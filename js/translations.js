@@ -126,12 +126,14 @@ const translations = {
       pillar3Desc: "Identificación de lote desde el campo de procedencia hasta el contenedor de despacho.",
       pillar4Title: "Conservación y Frío",
       pillar4Desc: "Mantenimiento ininterrumpido de la cadena de frío desde el hydrocooling hasta el destino.",
-      certTitle: "Espacio para Certificaciones Internacionales",
-      certSubtitle: "Procesos orientados a los más altos estándares de inocuidad y buenas prácticas agrícolas internacionales.",
-      certPlaceholder1: "[LOGO CERTIFICACIÓN]",
-      certPlaceholder2: "[LOGO CERTIFICACIÓN]",
-      certPlaceholder3: "[LOGO CERTIFICACIÓN]",
-      certPlaceholder4: "[LOGO CERTIFICACIÓN]"
+      certTitle: "Certificaciones de Calidad e Inocuidad",
+      certSubtitle: "Contamos con certificaciones auditadas internacionalmente que garantizan los más altos estándares de inocuidad alimentaria, buenas prácticas agrícolas y responsabilidad social.",
+      globalGapTitle: "GLOBALG.A.P. IFA",
+      globalGapDesc: "Certificación internacional de Buenas Prácticas Agrícolas e Inocuidad Alimentaria en campo y empaque.",
+      graspTitle: "GLOBALG.A.P. GRASP",
+      graspDesc: "Evaluación de riesgos de prácticas sociales, salud, seguridad y bienestar de los trabajadores agrícolas.",
+      certTag1: "Inocuidad & Calidad",
+      certTag2: "Práctica Social"
     },
 
     // Export & Logistics Section
@@ -172,6 +174,7 @@ const translations = {
       badge: "Formatos de Exportación",
       title: "Presentaciones disponibles",
       subtitle: "Ofrecemos diversas opciones de empaque adaptables a las demandas de su canal de distribución.",
+      zoomText: "Ver imagen completa",
       card1Name: "Presentación en Cajas con Atados (Bunched)",
       card1Caliber: "Calibre: [CALIBRES DISPONIBLES]",
       card1Format: "Presentación: [PRESENTACIONES - EJ. ATADOS CON LIGA]",
@@ -382,12 +385,14 @@ const translations = {
       pillar3Desc: "Complete batch identification traceable from individual field parcels to outbound shipping containers.",
       pillar4Title: "Cold Chain Preservation",
       pillar4Desc: "Unbroken cold chain management from immediate post-harvest hydrocooling to final destination.",
-      certTitle: "Space for International Certifications",
-      certSubtitle: "Processes aligned with international food safety standards and good agricultural practices.",
-      certPlaceholder1: "[CERTIFICATION LOGO]",
-      certPlaceholder2: "[CERTIFICATION LOGO]",
-      certPlaceholder3: "[CERTIFICATION LOGO]",
-      certPlaceholder4: "[CERTIFICATION LOGO]"
+      certTitle: "Quality & Safety Certifications",
+      certSubtitle: "We hold internationally audited certifications guaranteeing the highest standards in food safety, good agricultural practices, and social compliance.",
+      globalGapTitle: "GLOBALG.A.P. IFA",
+      globalGapDesc: "Global standard for Good Agricultural Practices and Food Safety compliance across farming and packing operations.",
+      graspTitle: "GLOBALG.A.P. GRASP",
+      graspDesc: "Social Practice Risk Assessment certification covering worker health, safety, and social welfare.",
+      certTag1: "Food Safety & Quality",
+      certTag2: "Social Compliance"
     },
 
     // Export & Logistics Section
@@ -428,6 +433,7 @@ const translations = {
       badge: "Export Formats",
       title: "Available presentations",
       subtitle: "We offer versatile packaging options tailored to your distribution channels and retail requirements.",
+      zoomText: "View full image",
       card1Name: "Bunched Format in Export Boxes",
       card1Caliber: "Caliber: [AVAILABLE CALIBERS]",
       card1Format: "Presentation: [PRESENTATIONS - E.G. ELASTIC BANDED BUNCHES]",

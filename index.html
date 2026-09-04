@@ -214,7 +214,7 @@
     <div class="container">
       <div class="product-layout">
         <!-- Visual Container -->
-        <div class="product-visual-wrapper reveal-on-scroll">
+        <div class="product-visual-wrapper reveal-on-scroll" data-lightbox-src="images-asparagus/1000505105.jpg" data-lightbox-title="Selección de espárragos frescos peruanos" style="cursor: pointer;">
           <img src="images-asparagus/1000505105.jpg" alt="Selección de espárragos frescos peruanos" class="product-visual-img">
           <div class="product-badge-origin">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -519,31 +519,46 @@
         </div>
       </div>
 
-      <!-- Certifications Placeholder Box -->
+      <!-- Certifications Box -->
       <div class="certifications-box reveal-on-scroll">
         <div class="cert-header-text">
-          <h3 class="cert-box-title" data-i18n="qualitySection.certTitle">Espacio para Certificaciones Internacionales</h3>
+          <span class="cert-status-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Estándares Auditados</span>
+          </span>
+          <h3 class="cert-box-title" data-i18n="qualitySection.certTitle">Certificaciones de Calidad e Inocuidad</h3>
           <p class="cert-box-subtitle" data-i18n="qualitySection.certSubtitle">
-            Procesos orientados a los más altos estándares de inocuidad y buenas prácticas agrícolas internacionales.
+            Contamos con certificaciones auditadas internacionalmente que garantizan los más altos estándares de inocuidad alimentaria, buenas prácticas agrícolas y responsabilidad social.
           </p>
         </div>
 
         <div class="cert-grid">
-          <div class="cert-placeholder-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            <span data-i18n="qualitySection.certPlaceholder1">[LOGO CERTIFICACIÓN]</span>
+          <!-- Cert 1: GLOBALG.A.P. -->
+          <div class="cert-card" data-lightbox-src="images-asparagus/global-gap.webp" data-lightbox-title="Certificación GLOBALG.A.P. IFA - Buenas Prácticas Agrícolas">
+            <div class="cert-logo-box">
+              <img src="images-asparagus/global-gap.webp" alt="Certificación GLOBALG.A.P." class="cert-logo-img">
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge-tag" data-i18n="qualitySection.certTag1">Inocuidad & Calidad</div>
+              <h4 class="cert-name" data-i18n="qualitySection.globalGapTitle">GLOBALG.A.P. IFA</h4>
+              <p class="cert-desc" data-i18n="qualitySection.globalGapDesc">
+                Certificación internacional de Buenas Prácticas Agrícolas e Inocuidad Alimentaria en campo y empaque.
+              </p>
+            </div>
           </div>
-          <div class="cert-placeholder-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            <span data-i18n="qualitySection.certPlaceholder2">[LOGO CERTIFICACIÓN]</span>
-          </div>
-          <div class="cert-placeholder-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            <span data-i18n="qualitySection.certPlaceholder3">[LOGO CERTIFICACIÓN]</span>
-          </div>
-          <div class="cert-placeholder-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            <span data-i18n="qualitySection.certPlaceholder4">[LOGO CERTIFICACIÓN]</span>
+
+          <!-- Cert 2: GRASP -->
+          <div class="cert-card" data-lightbox-src="images-asparagus/Grasp.webp" data-lightbox-title="Certificación GLOBALG.A.P. GRASP - Responsabilidad Social">
+            <div class="cert-logo-box">
+              <img src="images-asparagus/Grasp.webp" alt="Certificación GLOBALG.A.P. GRASP" class="cert-logo-img">
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge-tag" data-i18n="qualitySection.certTag2">Práctica Social</div>
+              <h4 class="cert-name" data-i18n="qualitySection.graspTitle">GLOBALG.A.P. GRASP</h4>
+              <p class="cert-desc" data-i18n="qualitySection.graspDesc">
+                Evaluación de riesgos de prácticas sociales, salud, seguridad y bienestar de los trabajadores agrícolas.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -726,7 +741,7 @@
     <div class="container">
       <div class="section-header reveal-on-scroll">
         <span class="section-badge" data-i18n="presentationsSection.badge">Formatos de Exportación</span>
-        <h2 class="section-title" data-i18n="presentationsSection.title">Presentaciones disponibles</h2>
+        <h2 class="section-title" data-i18n="presentationsSection.title">Presentaciones </h2>
         <p class="section-subtitle" data-i18n="presentationsSection.subtitle">
           Ofrecemos diversas opciones de empaque adaptables a las demandas de su canal de distribución.
         </p>
@@ -735,8 +750,19 @@
       <div class="presentations-grid">
         <!-- Presentation 1 -->
         <div class="presentation-card reveal-on-scroll">
-          <div class="presentation-img-box">
-            <img src="images-asparagus/1000505113.jpg" alt="Presentación en cajas con atados de espárrago" class="presentation-img">
+          <div class="presentation-img-box" data-lightbox-src="images-asparagus/tag-briviashan.webp" data-lightbox-title="Presentación en Cajas con Atados (Bunched)">
+            <img src="images-asparagus/tag-briviashan.webp" alt="Presentación en cajas con atados de espárrago" class="presentation-img">
+            <div class="presentation-img-overlay">
+              <span class="zoom-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
+              </span>
+            </div>
           </div>
           <div class="presentation-body">
             <h3 class="presentation-title" data-i18n="presentationsSection.card1Name">Presentación en Cajas con Atados (Bunched)</h3>
@@ -754,8 +780,19 @@
 
         <!-- Presentation 2 -->
         <div class="presentation-card reveal-on-scroll">
-          <div class="presentation-img-box">
-            <img src="images-asparagus/1000499824.jpg" alt="Espárrago a granel seleccionado" class="presentation-img">
+          <div class="presentation-img-box" data-lightbox-src="images-asparagus/tag-gourmet.webp" data-lightbox-title="Presentación a Granel (Loose / Bulk)">
+            <img src="images-asparagus/tag-gourmet.webp" alt="Espárrago a granel seleccionado" class="presentation-img">
+            <div class="presentation-img-overlay">
+              <span class="zoom-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
+              </span>
+            </div>
           </div>
           <div class="presentation-body">
             <h3 class="presentation-title" data-i18n="presentationsSection.card2Name">Presentación a Granel (Loose / Bulk)</h3>
@@ -773,8 +810,19 @@
 
         <!-- Presentation 3 -->
         <div class="presentation-card reveal-on-scroll">
-          <div class="presentation-img-box">
-            <img src="images-asparagus/1000499825.jpg" alt="Puntas de espárrago seleccionadas" class="presentation-img">
+          <div class="presentation-img-box" data-lightbox-src="images-asparagus/tag-square.webp" data-lightbox-title="Puntas / Tips de Espárrago">
+            <img src="images-asparagus/tag-square.webp" alt="Puntas de espárrago seleccionadas" class="presentation-img">
+            <div class="presentation-img-overlay">
+              <span class="zoom-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
+              </span>
+            </div>
           </div>
           <div class="presentation-body">
             <h3 class="presentation-title" data-i18n="presentationsSection.card3Name">Puntas / Tips de Espárrago</h3>
@@ -814,10 +862,8 @@
           </p>
         </div>
 
-        <div class="about-visual reveal-on-scroll">
-          <img src="images-asparagus/1000501314.jpg" alt="Campo de cultivo y cosecha de espárragos" class="about-img">
-          <div class="about-caption-badge" data-i18n="aboutSection.imageCaption">
-            [IMAGEN REAL DEL CAMPO Y EQUIPO DE COSECHA]
+        <div class="about-visual reveal-on-scroll" data-lightbox-src="images-asparagus/cosecha-esparrago.webp" data-lightbox-title="Campo de cultivo y cosecha de espárragos" style="cursor: pointer;">
+          <img src="images-asparagus/cosecha-esparrago.webp" alt="Campo de cultivo y cosecha de espárragos" class="about-img">
           </div>
         </div>
       </div>
@@ -963,6 +1009,23 @@
       <button type="button" class="btn btn-primary" id="close-modal-btn" data-i18n="formSection.closeBtn">
         Cerrar
       </button>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       IMAGE LIGHTBOX MODAL
+       ========================================================================== -->
+  <div class="modal-overlay lightbox-modal" id="image-lightbox-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-card">
+      <button type="button" class="lightbox-close-btn" id="close-lightbox-btn" aria-label="Cerrar">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="lightbox-img-wrapper">
+        <img id="lightbox-img" src="" alt="" class="lightbox-img">
+      </div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
   </div>
 

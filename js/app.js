@@ -269,6 +269,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
+  // 9. Gallery Image Lightbox Modal Handler
+  const lightboxModal = document.getElementById('image-lightbox-modal');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const closeLightboxBtn = document.getElementById('close-lightbox-btn');
+  const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+
+  const expandableBoxes = document.querySelectorAll('[data-lightbox-src]');
+
+  function openLightbox(src, title) {
+    if (lightboxModal && lightboxImg) {
+      lightboxImg.src = src;
+      lightboxImg.alt = title || '';
+      if (lightboxCaption) lightboxCaption.textContent = title || '';
+      lightboxModal.classList.add('is-visible');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeLightbox() {
+    if (lightboxModal) {
+      lightboxModal.classList.remove('is-visible');
+      document.body.style.overflow = '';
+    }
+  }
+
+  expandableBoxes.forEach(box => {
+    box.addEventListener('click', () => {
+      const src = box.getAttribute('data-lightbox-src');
+      const title = box.getAttribute('data-lightbox-title');
+      if (src) {
+        openLightbox(src, title);
+      }
+    });
+  });
+
+  if (closeLightboxBtn) closeLightboxBtn.addEventListener('click', closeLightbox);
+  if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+      closeModal();
+    }
+  });
+
   // Initialize
   updateLanguage('es');
 });
