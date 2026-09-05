@@ -75,7 +75,7 @@ const translations = {
       point1Title: "Frescura & Puntas Firmes",
       point1Desc: "Puntas compactas, cerradas y turgentes con hidratación óptima que preserva la vida útil en anaquel.",
       point2Title: "Calibre & Diámetro",
-      point2Desc: "Clasificación por calibres homogéneos: [CALIBRES DISPONIBLES] con cortes uniformes y rectos.",
+      point2Desc: "Clasificación por calibres homogéneos: Small, Medium, Large, Extra Large, Jumbo con cortes uniformes y rectos.",
       point3Title: "Selección en Packing",
       point3Desc: "Inspección individual para descartar defectos mecánicos, asegurando color verde intenso y aspecto impecable.",
       point4Title: "Empaque y Protección",
