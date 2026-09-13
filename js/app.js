@@ -181,9 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (productSelect && formatVal) {
         productSelect.value = formatVal;
       }
-      if (quoteFormSection) {
-        quoteFormSection.scrollIntoView({ behavior: 'smooth' });
-        // Highlight select briefly
+      switchView('#contacto');
+      if (productSelect) {
         productSelect.classList.add('highlight-pulse');
         setTimeout(() => {
           productSelect.classList.remove('highlight-pulse');
@@ -199,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBackdrop = document.getElementById('modal-backdrop');
 
   if (rfqForm) {
-    rfqForm.addEventListener('submit', (e) => {
+    rfqForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
       const submitBtn = rfqForm.querySelector('button[type="submit"]');
@@ -209,32 +208,97 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = `<span class="spinner"></span> ${t.submitting}`;
 
-      // Simulate clean asynchronous submission
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-        
-        // Show success modal
-        if (successModal) {
-          successModal.classList.add('is-visible');
-          document.body.style.overflow = 'hidden';
+      const accessKey = rfqForm.getAttribute('data-web3forms-key');
+
+      if (accessKey) {
+        // Enviar vía API de Web3Forms
+        try {
+          const formData = new FormData(rfqForm);
+          formData.append("access_key", accessKey);
+          formData.append("subject", "Nueva Cotización Internacional - BRIVIASHAN");
+          formData.append("from_name", "Web BRIVIASHAN Exportaciones");
+
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+          });
+          const data = await response.json();
+
+          if (data.success) {
+            if (successModal) {
+              successModal.classList.add('is-visible');
+              document.body.style.overflow = 'hidden';
+            }
+            rfqForm.reset();
+          } else {
+            alert(data.message || "Error al enviar la solicitud.");
+          }
+        } catch (err) {
+          console.error("Error al enviar el formulario:", err);
+          alert("Error de conexión al enviar el formulario. Por favor intente por WhatsApp.");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
         }
-        
-        // Reset form
-        rfqForm.reset();
-      }, 700);
+      } else {
+        // Intentar envío vía script PHP nativo de cPanel (php/contact.php)
+        try {
+          const formData = new FormData(rfqForm);
+          const response = await fetch("php/contact.php", {
+            method: "POST",
+            body: formData
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            if (data.success) {
+              if (successModal) {
+                successModal.classList.add('is-visible');
+                document.body.style.overflow = 'hidden';
+              }
+              rfqForm.reset();
+            } else {
+              alert(data.message || "No se pudo procesar la solicitud.");
+            }
+          } else {
+            // Fallback para pruebas locales
+            if (successModal) {
+              successModal.classList.add('is-visible');
+              document.body.style.overflow = 'hidden';
+            }
+            rfqForm.reset();
+          }
+        } catch (err) {
+          // Fallback vista previa en navegador sin servidor PHP local
+          if (successModal) {
+            successModal.classList.add('is-visible');
+            document.body.style.overflow = 'hidden';
+          }
+          rfqForm.reset();
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      }
     });
   }
 
   function closeModal() {
     if (successModal) {
       successModal.classList.remove('is-visible');
-      document.body.style.overflow = '';
     }
+    document.body.style.overflow = '';
   }
 
   if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
   if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+  if (successModal) {
+    successModal.addEventListener('click', (e) => {
+      if (e.target === successModal || e.target.classList.contains('modal-backdrop')) {
+        closeModal();
+      }
+    });
+  }
 
   // 7. WhatsApp Trigger with Dynamic Message
   const whatsappTriggers = document.querySelectorAll('.whatsapp-dynamic-link');
@@ -244,8 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const msg = currentLang === 'es'
         ? "Hola, estoy interesado en recibir información comercial y cotización de espárragos frescos peruanos de BRIVIASHAN."
         : "Hello, I am interested in receiving commercial information and a quotation for fresh Peruvian asparagus from BRIVIASHAN.";
-      // Placeholder phone number standard format (configured for direct WhatsApp click)
-      const phone = "51999999999"; 
+      const phone = "51984100809"; 
       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
     });
   });
@@ -278,35 +341,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const expandableBoxes = document.querySelectorAll('[data-lightbox-src]');
 
-  function openLightbox(src, title) {
-    if (lightboxModal && lightboxImg) {
-      lightboxImg.src = src;
-      lightboxImg.alt = title || '';
+  function openLightbox(src, title, extraSrc, extraTitle) {
+    if (!lightboxModal) return;
+
+    const singleWrapper = document.getElementById('lightbox-single-wrapper');
+    const multiWrapper = document.getElementById('lightbox-multi-wrapper');
+
+    if (extraSrc && multiWrapper && singleWrapper) {
+      singleWrapper.style.display = 'none';
+      multiWrapper.style.display = 'flex';
+
+      const mainLabel = currentLang === 'en' ? 'Lunchbox Pouch (Outer Box)' : 'Bolsa Lonchera (Empaque Exterior)';
+      const extraLabel = extraTitle || (currentLang === 'en' ? 'Wrapped Bundle (Inner Content)' : 'Atado en Envoltura (Contenido Interno)');
+      const infoText = currentLang === 'en' 
+        ? '💡 Note: The wrapped bundle (Flow Pack) is packed inside the Lunchbox pouch.' 
+        : '💡 Nota: El atado en envoltura (Flow Pack) va empacado en el interior de la bolsa Lonchera.';
+
+      multiWrapper.innerHTML = `
+        <div class="lightbox-multi-grid">
+          <div class="lightbox-multi-item">
+            <img decoding="async" src="${src}" alt="${title || ''}">
+            <span class="lightbox-item-badge">${mainLabel}</span>
+          </div>
+          <div class="lightbox-multi-item">
+            <img decoding="async" src="${extraSrc}" alt="${extraLabel}">
+            <span class="lightbox-item-badge">${extraLabel}</span>
+          </div>
+        </div>
+        <div class="lightbox-info-banner">${infoText}</div>
+      `;
+
       if (lightboxCaption) lightboxCaption.textContent = title || '';
-      lightboxModal.classList.add('is-visible');
-      document.body.style.overflow = 'hidden';
+    } else {
+      if (multiWrapper) multiWrapper.style.display = 'none';
+      if (singleWrapper) singleWrapper.style.display = 'flex';
+
+      if (lightboxImg) {
+        lightboxImg.src = src;
+        lightboxImg.alt = title || '';
+      }
+      if (lightboxCaption) lightboxCaption.textContent = title || '';
     }
+
+    lightboxModal.classList.add('is-visible');
+    document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
     if (lightboxModal) {
       lightboxModal.classList.remove('is-visible');
-      document.body.style.overflow = '';
     }
+    document.body.style.overflow = '';
   }
 
   expandableBoxes.forEach(box => {
     box.addEventListener('click', () => {
       const src = box.getAttribute('data-lightbox-src');
       const title = box.getAttribute('data-lightbox-title');
+      const extraSrc = box.getAttribute('data-lightbox-extra-src');
+      const extraTitle = box.getAttribute('data-lightbox-extra-title');
       if (src) {
-        openLightbox(src, title);
+        openLightbox(src, title, extraSrc, extraTitle);
       }
     });
   });
 
   if (closeLightboxBtn) closeLightboxBtn.addEventListener('click', closeLightbox);
   if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
+
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal || e.target.classList.contains('modal-backdrop')) {
+        closeLightbox();
+      }
+    });
+  }
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -315,6 +424,145 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // 10. KPI Number Counter Animation (60fps requestAnimationFrame)
+  let kpiAnimated = false;
+  function triggerKpiCounters() {
+    if (kpiAnimated) return;
+    kpiAnimated = true;
+    document.querySelectorAll('.kpi-number[data-target]').forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'), 10);
+      const startTime = performance.now();
+      const duration = 1200;
+
+      function updateCounter(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = Math.floor(progress * target);
+        counter.textContent = current + '+';
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target + '+';
+        }
+      }
+      requestAnimationFrame(updateCounter);
+    });
+  }
+
+  const kpiGrid = document.querySelector('.about-kpi-grid');
+  if (kpiGrid) {
+    const kpiObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          triggerKpiCounters();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    kpiObserver.observe(kpiGrid);
+  }
+
+  // 11. Multi-View SPA System (View Switching & Hash Routing)
+  const views = document.querySelectorAll('.site-view');
+
+  function switchView(targetId) {
+    if (!targetId || targetId === '#' || targetId === '') targetId = '#inicio';
+    
+    // Normalize target ID mapping
+    let viewId = targetId.startsWith('#view-') ? targetId : '#view-' + targetId.replace('#', '');
+    let targetView = document.querySelector(viewId);
+
+    // If targetView doesn't exist directly, map known section hashes
+    if (!targetView) {
+      const sectionToView = {
+        '#explorador': '#view-producto',
+        '#producto': '#view-producto',
+        '#proceso': '#view-proceso',
+        '#calidad': '#view-calidad',
+        '#nosotros': '#view-nosotros',
+        '#contacto': '#view-contacto',
+        '#inicio': '#view-inicio'
+      };
+      const mappedId = sectionToView[targetId];
+      if (mappedId) {
+        targetView = document.querySelector(mappedId);
+        viewId = mappedId;
+      } else {
+        targetView = document.querySelector('#view-inicio');
+        viewId = '#view-inicio';
+      }
+    }
+
+    // Hide all views and show active view
+    views.forEach(v => {
+      v.classList.remove('is-active');
+    });
+    targetView.classList.add('is-active');
+
+    // Update active state in nav links
+    const currentNavHash = targetId.replace('#view-', '#');
+    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+      const linkHash = link.getAttribute('href');
+      if (linkHash === currentNavHash || (currentNavHash === '#inicio' && linkHash === '#inicio')) {
+        link.classList.add('active-view');
+      } else {
+        link.classList.remove('active-view');
+      }
+    });
+
+    // Instant scroll to top (prevents smooth scroll thread lag during view switches)
+    window.scrollTo(0, 0);
+
+    // Instantly reveal items inside the active view
+    targetView.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      el.classList.add('revealed');
+    });
+
+    // Trigger KPI counters if opening Nosotros
+    if (viewId === '#view-nosotros') {
+      setTimeout(triggerKpiCounters, 200);
+    }
+  }
+
+  // Handle clicks on all links with href starting with '#'
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (anchor) {
+      const href = anchor.getAttribute('href');
+      if (href && href !== '#') {
+        e.preventDefault();
+        
+        // Update URL hash without browser jump
+        if (history.pushState) {
+          history.pushState(null, null, href);
+        } else {
+          window.location.hash = href;
+        }
+
+        switchView(href);
+
+        // Close mobile nav drawer if open
+        const mobileNavMenu = document.getElementById('mobile-nav-menu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        if (mobileNavMenu && mobileNavMenu.classList.contains('is-active')) {
+          mobileNavMenu.classList.remove('is-active');
+          if (mobileMenuBtn) {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
+          }
+        }
+      }
+    }
+  });
+
+  // Handle browser back / forward buttons (hashchange)
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash || '#inicio';
+    switchView(hash);
+  });
+
   // Initialize
   updateLanguage('es');
+  const initialHash = window.location.hash || '#inicio';
+  switchView(initialHash);
 });

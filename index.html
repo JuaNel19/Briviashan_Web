@@ -15,13 +15,16 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="BRIVIASHAN | Espárrago Peruano de Exportación Premium">
   <meta property="og:description" content="Del campo peruano a los mercados internacionales. Calidad, frescura y compromiso desde el origen hasta su destino.">
-  <meta property="og:image" content="images-asparagus/1000505104.jpg">
+  <meta property="og:image" content="images-asparagus/1000505104.webp">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.briviashan.com/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="Imagenes/LOGO-BRIVIASHAN-WHITE.svg">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.1.3">
 </head>
 <body>
 
@@ -31,17 +34,16 @@
   <header class="main-header" id="main-header">
     <div class="container header-container">
       <a href="#" class="header-logo-link" aria-label="BRIVIASHAN Inicio">
-        <img src="Imagenes/LOGO-BRIVIASHAN-WHITE.svg" alt="BRIVIASHAN Agroexportaciones" class="header-logo-img">
+        <img decoding="async" src="Imagenes/LOGO-BRIVIASHAN-WHITE.svg" alt="BRIVIASHAN Agroexportaciones" class="header-logo-img">
       </a>
 
       <!-- Desktop Nav -->
       <nav aria-label="Navegación principal">
         <ul class="nav-menu">
+          <li><a href="#inicio" class="nav-link active-view" data-i18n="nav.home">Inicio</a></li>
           <li><a href="#producto" class="nav-link" data-i18n="nav.product">Producto</a></li>
-          <li><a href="#explorador" class="nav-link" data-i18n="nav.interactive">Explorador</a></li>
           <li><a href="#proceso" class="nav-link" data-i18n="nav.process">Proceso</a></li>
           <li><a href="#calidad" class="nav-link" data-i18n="nav.quality">Calidad</a></li>
-          <li><a href="#exportacion" class="nav-link" data-i18n="nav.export">Exportación</a></li>
           <li><a href="#nosotros" class="nav-link" data-i18n="nav.about">Nosotros</a></li>
           <li><a href="#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
         </ul>
@@ -67,11 +69,10 @@
 
     <!-- Mobile Drawer Nav -->
     <div class="mobile-nav-menu" id="mobile-nav-menu">
+      <a href="#inicio" class="mobile-nav-link active-view" data-i18n="nav.home">Inicio</a>
       <a href="#producto" class="mobile-nav-link" data-i18n="nav.product">Producto</a>
-      <a href="#explorador" class="mobile-nav-link" data-i18n="nav.interactive">Explorador</a>
       <a href="#proceso" class="mobile-nav-link" data-i18n="nav.process">Proceso</a>
       <a href="#calidad" class="mobile-nav-link" data-i18n="nav.quality">Calidad</a>
-      <a href="#exportacion" class="mobile-nav-link" data-i18n="nav.export">Exportación</a>
       <a href="#nosotros" class="mobile-nav-link" data-i18n="nav.about">Nosotros</a>
       <a href="#contacto" class="mobile-nav-link" data-i18n="nav.contact">Contacto</a>
       
@@ -86,20 +87,23 @@
     </div>
   </header>
 
+  <main class="views-wrapper">
+    <!-- VISTA INICIO (PRIMERA VISTA) -->
+    <div class="site-view is-active" id="view-inicio">
+
 
   <!-- ==========================================================================
        1. HERO SECTION
        ========================================================================== -->
   <section class="hero-section" id="inicio">
     <div class="hero-bg">
-      <img src="images-asparagus/1000505104.jpg" alt="Espárrago peruano fresco de exportación" class="hero-bg-img">
+      <img decoding="async" src="images-asparagus/1000505104.webp" alt="Espárrago peruano fresco de exportación" class="hero-bg-img">
       <div class="hero-overlay"></div>
     </div>
 
     <div class="container hero-content">
       <span class="section-badge badge-gold reveal-on-scroll" data-i18n="hero.badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        Agroexportación de Origen Peruano
+       
       </span>
 
       <h1 class="hero-headline reveal-on-scroll" data-i18n="hero.title">
@@ -206,7 +210,83 @@
     </div>
   </section>
 
+      <!-- Executive Summary Quick Access Cards Section -->
+      <section class="section-padding executive-summary-section">
+        <div class="container">
+          <div class="exec-summary-header reveal-on-scroll">
+            <span class="section-badge badge-gold" data-i18n="executiveSummary.badge">Navegación Rápida</span>
+            <h2 class="section-title" data-i18n="executiveSummary.title">Explora la información de tu interés</h2>
+            <p class="section-subtitle" data-i18n="executiveSummary.subtitle">Selecciona una categoría para ver los detalles completos de nuestra oferta agroexportadora.</p>
+          </div>
 
+          <div class="exec-summary-grid reveal-on-scroll">
+            <!-- Card 1: Producto -->
+            <div class="exec-card">
+              <div class="exec-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="exec-card-body">
+                <h3 class="exec-card-title" data-i18n="executiveSummary.navProductTitle">Nuestro Espárrago</h3>
+                <p class="exec-card-desc" data-i18n="executiveSummary.navProductDesc">Especificaciones, calibres, formatos de empaque y explorador interactivo.</p>
+              </div>
+              <a href="#producto" class="btn btn-outline exec-card-btn" data-i18n="executiveSummary.navProductBtn">Ver Producto</a>
+            </div>
+
+            <!-- Card 2: Proceso -->
+            <div class="exec-card">
+              <div class="exec-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="exec-card-body">
+                <h3 class="exec-card-title" data-i18n="executiveSummary.navProcessTitle">Trazabilidad & Proceso</h3>
+                <p class="exec-card-desc" data-i18n="executiveSummary.navProcessDesc">Seguimiento riguroso paso a paso desde el corte en campo hasta el embarque.</p>
+              </div>
+              <a href="#proceso" class="btn btn-outline exec-card-btn" data-i18n="executiveSummary.navProcessBtn">Ver Proceso</a>
+            </div>
+
+            <!-- Card 3: Calidad -->
+            <div class="exec-card">
+              <div class="exec-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="exec-card-body">
+                <h3 class="exec-card-title" data-i18n="executiveSummary.navQualityTitle">Garantía & Calidad B2B</h3>
+                <p class="exec-card-desc" data-i18n="executiveSummary.navQualityDesc">Inspecciones fitosanitarias, control de temperatura y motivos para elegirnos.</p>
+              </div>
+              <a href="#calidad" class="btn btn-outline exec-card-btn" data-i18n="executiveSummary.navQualityBtn">Ver Calidad</a>
+            </div>
+
+            <!-- Card 5: Nosotros -->
+            <div class="exec-card">
+              <div class="exec-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="exec-card-body">
+                <h3 class="exec-card-title" data-i18n="executiveSummary.navAboutTitle">Nuestra Empresa</h3>
+                <p class="exec-card-desc" data-i18n="executiveSummary.navAboutDesc">1+ años de trayectoria, agricultura sostenible, valores y certificaciones.</p>
+              </div>
+              <a href="#nosotros" class="btn btn-outline exec-card-btn" data-i18n="executiveSummary.navAboutBtn">Ver Nosotros</a>
+            </div>
+
+            <!-- Card 6: Contacto -->
+            <div class="exec-card">
+              <div class="exec-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="exec-card-body">
+                <h3 class="exec-card-title" data-i18n="executiveSummary.navContactTitle">Cotización Internacional</h3>
+                <p class="exec-card-desc" data-i18n="executiveSummary.navContactDesc">Formulario B2B directo y canales de atención rápida por WhatsApp y correo.</p>
+              </div>
+              <a href="#contacto" class="btn btn-primary exec-card-btn" data-i18n="executiveSummary.navContactBtn">Solicitar Cotización</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </div><!-- /#view-inicio -->
+
+  <!-- VISTA PRODUCTO -->
+  <div class="site-view" id="view-producto">
   <!-- ==========================================================================
        3. THE PRODUCT SECTION
        ========================================================================== -->
@@ -214,11 +294,11 @@
     <div class="container">
       <div class="product-layout">
         <!-- Visual Container -->
-        <div class="product-visual-wrapper reveal-on-scroll" data-lightbox-src="images-asparagus/1000505105.jpg" data-lightbox-title="Selección de espárragos frescos peruanos" style="cursor: pointer;">
-          <img src="images-asparagus/1000505105.jpg" alt="Selección de espárragos frescos peruanos" class="product-visual-img">
+        <div class="product-visual-wrapper reveal-on-scroll" data-lightbox-src="images-asparagus/LG.webp" data-lightbox-title="Selección de espárragos frescos peruanos" style="cursor: pointer;">
+          <img decoding="async" src="images-asparagus/esp3.webp" alt="Selección de espárragos frescos peruanos" class="product-visual-img">
           <div class="product-badge-origin">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Origen Valles del Perú</span>
+            <span>Origen Peruano Certificado</span>
           </div>
         </div>
 
@@ -272,6 +352,204 @@
 
 
   <!-- ==========================================================================
+       FORMATOS DE PRESENTACIÓN / EXPORTACIÓN
+       ========================================================================== -->
+  <section class="section-padding presentations-section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-badge" data-i18n="presentationsSection.badge">Formatos de Exportación</span>
+        <h2 class="section-title" data-i18n="presentationsSection.title">Presentaciones Solicitadas por nuestros clientes</h2>
+        <p class="section-subtitle" data-i18n="presentationsSection.subtitle">
+          Ofrecemos diversas opciones de empaque adaptables a las demandas de su canal de distribución.
+        </p>
+      </div>
+
+      <div class="presentations-grid">
+        <!-- Presentation 1 -->
+        <div class="presentation-card reveal-on-scroll">
+          <div class="presentation-img-box" data-lightbox-src="images-asparagus/five-crowns.webp" data-lightbox-title="Presentación Five Crowns (Bunched)">
+            <img decoding="async" src="images-asparagus/five-crowns.webp" alt="Presentación Five Crowns atados de espárrago" class="presentation-img">
+            <div class="presentation-img-overlay">
+              <span class="zoom-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
+              </span>
+            </div>
+          </div>
+          <div class="presentation-body">
+            <h3 class="presentation-title" data-i18n="presentationsSection.card1Name">Presentación en Cajas con Atados (Bunched)</h3>
+            <div class="presentation-specs">
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card1Caliber">Calibre: SM, STD, MD, LG, XL, JUMBO</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card1Format">Presentación: [PRESENTACIONES - EJ. ATADOS CON LIGA]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card1Weight">Peso: [PESO POR CAJA - EJ. 5 KG / 11 LBS]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card1Packing">Empaque: [TIPO DE EMPAQUE - CAJA CARTÓN EXPORTACIÓN]</div>
+            </div>
+            <a href="#contacto" class="btn btn-outline-green presentation-inquire-btn" data-format-value="Espárrago fresco verde - Cajas con atados (Bunched)" data-i18n="presentationsSection.card1Btn">
+              Solicitar información
+            </a>
+          </div>
+        </div>
+
+        <!-- Presentation 2 -->
+        <div class="presentation-card reveal-on-scroll">
+          <div class="presentation-img-box" data-lightbox-src="images-asparagus/tag-gourmet.webp" data-lightbox-title="Presentación Gourmet">
+            <img decoding="async" src="images-asparagus/tag-gourmet.webp" alt="Espárrago a granel seleccionado" class="presentation-img">
+            <div class="presentation-img-overlay">
+              <span class="zoom-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
+              </span>
+            </div>
+          </div>
+          <div class="presentation-body">
+            <h3 class="presentation-title" data-i18n="presentationsSection.card2Name">Presentación Gourmet</h3>
+            <div class="presentation-specs">
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card2Caliber">Calibre: [CALIBRES DISPONIBLES]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card2Format">Presentación: [PRESENTACIONES - GRANEL SELECCIONADO]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card2Weight">Peso: [PESO POR CAJA - SEGÚN REQUERIMIENTO]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card2Packing">Empaque: [TIPO DE EMPAQUE - CAJA TELESCÓPICA O PLÁSTICA]</div>
+            </div>
+            <a href="#contacto" class="btn btn-outline-green presentation-inquire-btn" data-format-value="Espárrago fresco verde - A granel (Loose / Bulk)" data-i18n="presentationsSection.card2Btn">
+              Solicitar información
+            </a>
+          </div>
+        </div>
+
+        <!-- Presentation 3 -->
+        <div class="presentation-card reveal-on-scroll">
+          <div class="presentation-img-box" data-lightbox-src="images-asparagus/tag-square.webp" data-lightbox-title="Presentacion Square 10X520">
+            <img decoding="async" src="images-asparagus/tag-square.webp" alt="Puntas de espárrago seleccionadas" class="presentation-img">
+            <div class="presentation-img-overlay">
+              <span class="zoom-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
+              </span>
+            </div>
+          </div>
+          <div class="presentation-body">
+            <h3 class="presentation-title" data-i18n="presentationsSection.card3Name">Presentacion Square 10X520</h3>
+            <div class="presentation-specs">
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card3Caliber">Calibre: [CALIBRES DISPONIBLES]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card3Format">Presentación: [PRESENTACIONES - CORTE DE PUNTAS SELECCIONADAS]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card3Weight">Peso: [PESO POR CAJA - SEGÚN REQUERIMIENTO]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card3Packing">Empaque: [TIPO DE EMPAQUE - FLOW PACK / CAJA]</div>
+            </div>
+            <a href="#contacto" class="btn btn-outline-green presentation-inquire-btn" data-format-value="Puntas de espárrago (Tips)" data-i18n="presentationsSection.card3Btn">
+              Solicitar información
+            </a>
+          </div>
+        </div>
+
+        <!-- Presentation 5: Lonchera -->
+        <div class="presentation-card reveal-on-scroll">
+          <div class="presentation-img-box" data-lightbox-src="images-asparagus/lonchera.webp" data-lightbox-title="Presentación Lonchera Espaceite S.L" data-lightbox-extra-src="images-asparagus/envoltura.webp" data-lightbox-extra-title="Atado en Envoltura Flow Pack (Contenido Interno)">
+            <img decoding="async" src="images-asparagus/lonchera.webp" alt="Presentación lonchera pouch de espárrago" class="presentation-img">
+            <div class="presentation-img-overlay">
+              <span class="zoom-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
+              </span>
+            </div>
+          </div>
+          <div class="presentation-body">
+            <h3 class="presentation-title" data-i18n="presentationsSection.card5Name">Presentación Lonchera Espaceite S.L</h3>
+            <div class="presentation-specs">
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card5Caliber">Calibre: LG</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card5Format">Presentación: [PRESENTACIONES - BOLSA LONCHERA / POUCH]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card5Weight">Peso: [PESO POR BOLSA / CAJA - SEGÚN REQUERIMIENTO]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card5Packing">Empaque: [TIPO DE EMPAQUE - BOLSA MAP / CAJA MASTER]</div>
+            </div>
+            <a href="#contacto" class="btn btn-outline-green presentation-inquire-btn" data-format-value="Espárrago fresco verde - Lonchera (Pouch Bag / Snacking)" data-i18n="presentationsSection.card5Btn">
+              Solicitar información
+            </a>
+          </div>
+        </div>
+
+        <!-- Presentation 6: 17x300 -->
+        <div class="presentation-card reveal-on-scroll">
+          <div class="presentation-img-box" data-lightbox-src="images-asparagus/17x300.webp" data-lightbox-title="Presentación 17x300 (Corte y Medida Especial)">
+            <img decoding="async" src="images-asparagus/17x300.webp" alt="Presentación 17x300 corte especial de espárrago" class="presentation-img">
+            <div class="presentation-img-overlay">
+              <span class="zoom-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
+              </span>
+            </div>
+          </div>
+          <div class="presentation-body">
+            <h3 class="presentation-title" data-i18n="presentationsSection.card6Name">Presentación 17x300 (Corte y Medida Especial)</h3>
+            <div class="presentation-specs">
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card6Caliber">Calibre: SM, STD, MD, LG, XL, JUMBO</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card6Format">Presentación: [PRESENTACIONES - CORTE ESPECIAL 17x300 MM]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card6Weight">Peso: [PESO POR CAJA / EMPAQUE - SEGÚN REQUERIMIENTO]</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card6Packing">Empaque: [TIPO DE EMPAQUE - CAJA EXPORTACIÓN / MAP]</div>
+            </div>
+            <a href="#contacto" class="btn btn-outline-green presentation-inquire-btn" data-format-value="Espárrago fresco verde - Presentación 17x300" data-i18n="presentationsSection.card6Btn">
+              Solicitar información
+            </a>
+          </div>
+        </div>
+
+        <!-- Presentation 7: STD 20x250 -->
+        <div class="presentation-card reveal-on-scroll">
+          <div class="presentation-img-box" data-lightbox-src="images-asparagus/std-20x250.webp" data-lightbox-title="Presentación Standard (STD 20x250)">
+            <img decoding="async" src="images-asparagus/std-20x250.webp" alt="Presentación corte standard 20x250 mm de espárrago" class="presentation-img">
+            <div class="presentation-img-overlay">
+              <span class="zoom-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
+              </span>
+            </div>
+          </div>
+          <div class="presentation-body">
+            <h3 class="presentation-title" data-i18n="presentationsSection.card7Name">Presentación Standard (STD 20x250)</h3>
+            <div class="presentation-specs">
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card7Caliber">Calibre: STD</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card7Format">Presentación: Corte Standard 20x250 mm seleccionado</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card7Weight">Peso: Atado - Según requerimiento / Caja exportación</div>
+              <div class="presentation-spec-item" data-i18n="presentationsSection.card7Packing">Empaque: Caja de Polipropileno Alveolar / Cartón grado exportación</div>
+            </div>
+            <a href="#contacto" class="btn btn-outline-green presentation-inquire-btn" data-format-value="Espárrago fresco verde - Presentación STD 20x250" data-i18n="presentationsSection.card7Btn">
+              Solicitar información
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
        4. INTERACTIVE PRODUCT EXPERIENCE
        ========================================================================== -->
   <section class="section-padding interactive-section" id="explorador">
@@ -287,7 +565,7 @@
       <div class="interactive-container">
         <!-- Interactive Image with Hotspots -->
         <div class="interactive-visual-container reveal-on-scroll">
-          <img src="images-asparagus/img-1.webp" alt="Inspección detallada de espárrago verde" class="interactive-img">
+          <img decoding="async" src="images-asparagus/img-1.webp" alt="Inspección detallada de espárrago verde" class="interactive-img">
           
           <!-- Hotspot 1: Frescura -->
           <button type="button" class="hotspot-pin pin-1 active" data-point-index="1" aria-label="Inspeccionar frescura">
@@ -342,6 +620,10 @@
   </section>
 
 
+  </div><!-- /#view-producto -->
+
+  <!-- VISTA PROCESO -->
+  <div class="site-view" id="view-proceso">
   <!-- ==========================================================================
        5. FROM FIELD TO DESTINATION (TIMELINE)
        ========================================================================== -->
@@ -353,6 +635,58 @@
         <p class="section-subtitle" data-i18n="processSection.subtitle">
           Un flujo logístico y operativo diseñado para preservar la frescura desde la cosecha hasta la entrega internacional.
         </p>
+      </div>
+
+      <!-- Process Hero Featured Visual -->
+      <div class="process-hero-block reveal-on-scroll">
+        <div class="process-hero-img-box" data-lightbox-src="images-asparagus/esp2.webp" data-lightbox-title="Control de calidad e inspección de espárragos frescos" style="cursor: pointer;">
+          <img decoding="async" src="images-asparagus/esp2.webp" alt="Proceso de control de calidad e inspección de espárragos" class="process-hero-img">
+          <div class="process-hero-overlay">
+            <span class="zoom-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>Ver inspección en detalle</span>
+            </span>
+          </div>
+          <div class="process-badge-tag">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Inspección Fitosanitaria de Origen</span>
+          </div>
+        </div>
+
+        <div class="process-hero-content">
+          <h3 class="process-hero-title">Cadena de Frío e Inspección Rigurosa</h3>
+          <p class="process-hero-desc">
+            Nuestros procesos operativos garantizan una trazabilidad completa desde la cosecha manual en los valles del Perú hasta la entrega refrigerada en puertos internacionales. Cada lote pasa por estrictos controles de sanidad vegetal, calibración uniforme y empaque técnico de grado exportación.
+          </p>
+          <div class="process-highlights-grid">
+            <div class="process-highlight-item">
+              <div class="highlight-icon">❄️</div>
+              <div class="highlight-info">
+                <strong>Hidroenfriamiento (Hydrocooling)</strong>
+                <span>Reducción térmica inmediata a 1°C en planta de empaque</span>
+              </div>
+            </div>
+            <div class="process-highlight-item">
+              <div class="highlight-icon">✈️</div>
+              <div class="highlight-info">
+                <strong>Despacho Aéreo & Marítimo</strong>
+                <span>Monitoreo térmico continuo en tiempo real</span>
+              </div>
+            </div>
+            <div class="process-highlight-item">
+              <div class="highlight-icon">📋</div>
+              <div class="highlight-info">
+                <strong>Certificación SENASA</strong>
+                <span>Inspección fitosanitaria antes del despacho</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-track">
@@ -472,6 +806,10 @@
   </section>
 
 
+  </div><!-- /#view-proceso -->
+
+  <!-- VISTA CALIDAD -->
+  <div class="site-view" id="view-calidad">
   <!-- ==========================================================================
        6. QUALITY & TRUST SECTION
        ========================================================================== -->
@@ -519,6 +857,49 @@
         </div>
       </div>
 
+      <!-- Quality Featured Image Banner -->
+      <div class="quality-visual-banner reveal-on-scroll">
+        <div class="quality-banner-img-box" data-lightbox-src="images-asparagus/esp1.webp" data-lightbox-title="Estándar de selección de espárragos frescos verdes" style="cursor: pointer;">
+          <img decoding="async" src="images-asparagus/esp1.webp" alt="Estándar de calidad y selección de espárrago verde" class="quality-banner-img">
+          <div class="quality-banner-overlay">
+            <span class="zoom-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>Ampliar imagen de selección</span>
+            </span>
+          </div>
+          <div class="quality-badge-tag">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Estándar Calidad Exportación</span>
+          </div>
+        </div>
+
+        <div class="quality-banner-content">
+          <h3 class="quality-banner-title">Compromiso Riguroso con la Selección y la Frescura</h3>
+          <p class="quality-banner-desc">
+            Cada espárrago procesado por BRIVIASHAN es sometido a estrictos controles organolépticos y fitosanitarios. Auditamos la uniformidad en longitud, el diámetro de turión y el estado perfecto de las puntas para garantizar un producto de primera categoría que supere las normas del mercado internacional.
+          </p>
+          <div class="quality-checks-list">
+            <div class="quality-check-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#52b788" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Turiones firmes con puntas cerradas y turgentes</span>
+            </div>
+            <div class="quality-check-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#52b788" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Clasificación por calibres estandarizados (SM a JUMBO)</span>
+            </div>
+            <div class="quality-check-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#52b788" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Higiene y sanidad en planta bajo protocolo SENASA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Certifications Box -->
       <div class="certifications-box reveal-on-scroll">
         <div class="cert-header-text">
@@ -536,7 +917,7 @@
           <!-- Cert 1: GLOBALG.A.P. -->
           <div class="cert-card" data-lightbox-src="images-asparagus/global-gap.webp" data-lightbox-title="Certificación GLOBALG.A.P. IFA - Buenas Prácticas Agrícolas">
             <div class="cert-logo-box">
-              <img src="images-asparagus/global-gap.webp" alt="Certificación GLOBALG.A.P." class="cert-logo-img">
+              <img decoding="async" src="images-asparagus/global-gap.webp" alt="Certificación GLOBALG.A.P." class="cert-logo-img">
             </div>
             <div class="cert-info">
               <div class="cert-badge-tag" data-i18n="qualitySection.certTag1">Inocuidad & Calidad</div>
@@ -550,7 +931,7 @@
           <!-- Cert 2: GRASP -->
           <div class="cert-card" data-lightbox-src="images-asparagus/Grasp.webp" data-lightbox-title="Certificación GLOBALG.A.P. GRASP - Responsabilidad Social">
             <div class="cert-logo-box">
-              <img src="images-asparagus/Grasp.webp" alt="Certificación GLOBALG.A.P. GRASP" class="cert-logo-img">
+              <img decoding="async" src="images-asparagus/Grasp.webp" alt="Certificación GLOBALG.A.P. GRASP" class="cert-logo-img">
             </div>
             <div class="cert-info">
               <div class="cert-badge-tag" data-i18n="qualitySection.certTag2">Práctica Social</div>
@@ -564,117 +945,6 @@
       </div>
     </div>
   </section>
-
-
-  <!-- ==========================================================================
-       7. EXPORT & GLOBAL REACH SECTION
-       ========================================================================== -->
-  <section class="section-padding export-section" id="exportacion">
-    <div class="container">
-      <div class="section-header reveal-on-scroll">
-        <span class="section-badge badge-white" data-i18n="exportSection.badge">Comercio Internacional</span>
-        <h2 class="section-title title-white" data-i18n="exportSection.title">Capacidad para atender mercados internacionales</h2>
-        <p class="section-subtitle subtitle-light" data-i18n="exportSection.subtitle">
-          Estructura logística preparada para conectar la producción peruana con importadores y distribuidores en los principales mercados globales.
-        </p>
-      </div>
-
-      <div class="export-grid">
-        <!-- Stylized Map Visual -->
-        <div class="map-visual-container reveal-on-scroll">
-          <svg class="world-map-svg" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="mapGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#2d6a4f" stop-opacity="0.3"/>
-                <stop offset="100%" stop-color="#52b788" stop-opacity="0.1"/>
-              </linearGradient>
-            </defs>
-            <!-- Continents Vector Shapes -->
-            <path d="M120 70 Q160 50 220 80 T260 150 Q230 190 170 170 T110 110 Z" fill="#1b4d32" opacity="0.6"/> <!-- North America -->
-            <path d="M220 220 Q260 210 280 270 T240 380 Q210 390 190 310 T220 220 Z" fill="#2d6a4f" opacity="0.8"/> <!-- South America -->
-            <path d="M380 70 Q460 60 500 110 T460 180 Q400 180 370 130 Z" fill="#1b4d32" opacity="0.6"/> <!-- Europe -->
-            <path d="M390 190 Q480 180 490 280 T420 380 Q370 330 360 250 Z" fill="#1b4d32" opacity="0.5"/> <!-- Africa -->
-            <path d="M520 80 Q660 70 720 160 T620 280 Q530 240 510 160 Z" fill="#1b4d32" opacity="0.6"/> <!-- Asia -->
-            <path d="M620 310 Q690 300 700 370 T610 390 Z" fill="#1b4d32" opacity="0.5"/> <!-- Oceania -->
-
-            <!-- Routes Originating from Peru -->
-            <!-- To North America -->
-            <path d="M 215 285 Q 160 180 190 110" stroke="#52b788" stroke-width="2" stroke-dasharray="6,4" fill="none" opacity="0.8"/>
-            <circle cx="190" cy="110" r="4" fill="#52b788"/>
-
-            <!-- To Europe -->
-            <path d="M 215 285 Q 310 160 430 120" stroke="#52b788" stroke-width="2" stroke-dasharray="6,4" fill="none" opacity="0.8"/>
-            <circle cx="430" cy="120" r="4" fill="#52b788"/>
-
-            <!-- To Asia -->
-            <path d="M 215 285 Q 400 240 590 170" stroke="#52b788" stroke-width="2" stroke-dasharray="6,4" fill="none" opacity="0.8"/>
-            <circle cx="590" cy="170" r="4" fill="#52b788"/>
-
-            <!-- Origin Point: Peru -->
-            <circle cx="215" cy="285" r="7" fill="#c5a059"/>
-            <circle cx="215" cy="285" r="14" stroke="#c5a059" stroke-width="1.5" opacity="0.7">
-              <animate attributeName="r" values="7;22" dur="2.2s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0.8;0" dur="2.2s" repeatCount="indefinite"/>
-            </circle>
-            <text x="215" y="318" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">PERÚ (ORIGEN)</text>
-          </svg>
-          <p class="map-caption" data-i18n="exportSection.mapNote">
-            Rutas de exportación desde puertos y aeropuertos peruanos hacia compradores internacionales.
-          </p>
-        </div>
-
-        <!-- Logistics Card -->
-        <div class="logistics-card reveal-on-scroll">
-          <div class="logistics-item">
-            <span class="logistics-label">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span data-i18n="exportSection.originLabel">Origen</span>:
-            </span>
-            <span class="logistics-val" data-i18n="exportSection.originVal">Perú (Valles Costeros)</span>
-          </div>
-
-          <div class="logistics-item">
-            <span class="logistics-label">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
-              <span data-i18n="exportSection.productLabel">Producto</span>:
-            </span>
-            <span class="logistics-val" data-i18n="exportSection.productVal">Espárrago verde fresco</span>
-          </div>
-
-          <div class="logistics-item">
-            <span class="logistics-label">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
-              <span data-i18n="exportSection.destLabel">Destino</span>:
-            </span>
-            <span class="logistics-val" data-i18n="exportSection.destVal">Mercados internacionales</span>
-          </div>
-
-          <div class="logistics-item">
-            <span class="logistics-label">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg>
-              <span data-i18n="exportSection.logisticsLabel">Logística</span>:
-            </span>
-            <span class="logistics-val placeholder-tag" data-i18n="exportSection.logisticsVal">[INFORMACIÓN LOGÍSTICA / VÍA AÉREA Y MARÍTIMA]</span>
-          </div>
-
-          <div class="logistics-item">
-            <span class="logistics-label">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
-              <span data-i18n="exportSection.incotermsLabel">Incoterms</span>:
-            </span>
-            <span class="logistics-val placeholder-tag" data-i18n="exportSection.incotermsVal">[INFORMACIÓN INCOTERMS: FOB, CIF, CFR]</span>
-          </div>
-
-          <div style="margin-top: 2rem;">
-            <a href="#contacto" class="btn btn-gold" style="width: 100%;" data-i18n="productSection.ctaQuote">
-              Solicitar cotización de exportación
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- ==========================================================================
        8. WHY WORK WITH US
@@ -734,139 +1004,159 @@
   </section>
 
 
+
+  
+
+  </div><!-- /#view-calidad -->
+
+  <!-- VISTA NOSOTROS -->
+  <div class="site-view" id="view-nosotros">
   <!-- ==========================================================================
-       9. PRESENTATIONS GALLERY
-       ========================================================================== -->
-  <section class="section-padding presentations-section">
-    <div class="container">
-      <div class="section-header reveal-on-scroll">
-        <span class="section-badge" data-i18n="presentationsSection.badge">Formatos de Exportación</span>
-        <h2 class="section-title" data-i18n="presentationsSection.title">Presentaciones </h2>
-        <p class="section-subtitle" data-i18n="presentationsSection.subtitle">
-          Ofrecemos diversas opciones de empaque adaptables a las demandas de su canal de distribución.
-        </p>
-      </div>
-
-      <div class="presentations-grid">
-        <!-- Presentation 1 -->
-        <div class="presentation-card reveal-on-scroll">
-          <div class="presentation-img-box" data-lightbox-src="images-asparagus/tag-briviashan.webp" data-lightbox-title="Presentación en Cajas con Atados (Bunched)">
-            <img src="images-asparagus/tag-briviashan.webp" alt="Presentación en cajas con atados de espárrago" class="presentation-img">
-            <div class="presentation-img-overlay">
-              <span class="zoom-badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  <line x1="11" y1="8" x2="11" y2="14"></line>
-                  <line x1="8" y1="11" x2="14" y2="11"></line>
-                </svg>
-                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
-              </span>
-            </div>
-          </div>
-          <div class="presentation-body">
-            <h3 class="presentation-title" data-i18n="presentationsSection.card1Name">Presentación en Cajas con Atados (Bunched)</h3>
-            <div class="presentation-specs">
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card1Caliber">Calibre: [CALIBRES DISPONIBLES]</div>
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card1Format">Presentación: [PRESENTACIONES - EJ. ATADOS CON LIGA]</div>
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card1Weight">Peso: [PESO POR CAJA - EJ. 5 KG / 11 LBS]</div>
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card1Packing">Empaque: [TIPO DE EMPAQUE - CAJA CARTÓN EXPORTACIÓN]</div>
-            </div>
-            <a href="#contacto" class="btn btn-outline-green presentation-inquire-btn" data-format-value="Espárrago fresco verde - Cajas con atados (Bunched)" data-i18n="presentationsSection.card1Btn">
-              Solicitar información
-            </a>
-          </div>
-        </div>
-
-        <!-- Presentation 2 -->
-        <div class="presentation-card reveal-on-scroll">
-          <div class="presentation-img-box" data-lightbox-src="images-asparagus/tag-gourmet.webp" data-lightbox-title="Presentación a Granel (Loose / Bulk)">
-            <img src="images-asparagus/tag-gourmet.webp" alt="Espárrago a granel seleccionado" class="presentation-img">
-            <div class="presentation-img-overlay">
-              <span class="zoom-badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  <line x1="11" y1="8" x2="11" y2="14"></line>
-                  <line x1="8" y1="11" x2="14" y2="11"></line>
-                </svg>
-                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
-              </span>
-            </div>
-          </div>
-          <div class="presentation-body">
-            <h3 class="presentation-title" data-i18n="presentationsSection.card2Name">Presentación a Granel (Loose / Bulk)</h3>
-            <div class="presentation-specs">
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card2Caliber">Calibre: [CALIBRES DISPONIBLES]</div>
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card2Format">Presentación: [PRESENTACIONES - GRANEL SELECCIONADO]</div>
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card2Weight">Peso: [PESO POR CAJA - SEGÚN REQUERIMIENTO]</div>
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card2Packing">Empaque: [TIPO DE EMPAQUE - CAJA TELESCÓPICA O PLÁSTICA]</div>
-            </div>
-            <a href="#contacto" class="btn btn-outline-green presentation-inquire-btn" data-format-value="Espárrago fresco verde - A granel (Loose / Bulk)" data-i18n="presentationsSection.card2Btn">
-              Solicitar información
-            </a>
-          </div>
-        </div>
-
-        <!-- Presentation 3 -->
-        <div class="presentation-card reveal-on-scroll">
-          <div class="presentation-img-box" data-lightbox-src="images-asparagus/tag-square.webp" data-lightbox-title="Puntas / Tips de Espárrago">
-            <img src="images-asparagus/tag-square.webp" alt="Puntas de espárrago seleccionadas" class="presentation-img">
-            <div class="presentation-img-overlay">
-              <span class="zoom-badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  <line x1="11" y1="8" x2="11" y2="14"></line>
-                  <line x1="8" y1="11" x2="14" y2="11"></line>
-                </svg>
-                <span data-i18n="presentationsSection.zoomText">Ver imagen completa</span>
-              </span>
-            </div>
-          </div>
-          <div class="presentation-body">
-            <h3 class="presentation-title" data-i18n="presentationsSection.card3Name">Puntas / Tips de Espárrago</h3>
-            <div class="presentation-specs">
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card3Caliber">Calibre: [CALIBRES DISPONIBLES]</div>
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card3Format">Presentación: [PRESENTACIONES - CORTE DE PUNTAS SELECCIONADAS]</div>
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card3Weight">Peso: [PESO POR CAJA - SEGÚN REQUERIMIENTO]</div>
-              <div class="presentation-spec-item" data-i18n="presentationsSection.card3Packing">Empaque: [TIPO DE EMPAQUE - FLOW PACK / CAJA]</div>
-            </div>
-            <a href="#contacto" class="btn btn-outline-green presentation-inquire-btn" data-format-value="Puntas de espárrago (Tips)" data-i18n="presentationsSection.card3Btn">
-              Solicitar información
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==========================================================================
-       10. ABOUT US SECTION
+       10. ABOUT US SECTION (MODERN, CLEAN B2B DESIGN)
        ========================================================================== -->
   <section class="section-padding about-section" id="nosotros">
     <div class="container">
+      <!-- Top Grid: Who We Are Story & Image -->
       <div class="about-grid">
         <div class="about-content reveal-on-scroll">
           <span class="section-badge" data-i18n="aboutSection.badge">Nuestra Empresa</span>
-          <h2 class="section-title" data-i18n="aboutSection.title">Conectamos el campo peruano con compradores de todo el mundo</h2>
+          <h2 class="section-title" data-i18n="aboutSection.title">Excelencia y compromiso en la agroexportación peruana</h2>
           <p class="about-text" data-i18n="aboutSection.p1">
-            En BRIVIASHAN AGROEXPORTACIONES EIRL nos dedicamos a la producción, selección y exportación de espárragos frescos peruanos de la más alta calidad comercial.
+            Somos una empresa peruana dedicada a la producción, selección y exportación de espárragos frescos verdes de calidad superior, cultivados en los valles más fértiles de la costa del Perú.
           </p>
           <p class="about-text" data-i18n="aboutSection.p2">
-            Trabajamos con un enfoque orientado a la satisfacción de compradores internacionales, combinando la riqueza agrícola de los valles del Perú con un riguroso control operativo, cadena de frío y atención personalizada.
+            Con más de 1 año de experiencia en el sector agroexportador, impulsamos una agricultura sostenible basada en la gestión eficiente de la tierra, el agua y los recursos naturales para abastecer a los mercados internacionales más exigentes.
           </p>
           <p class="about-text" data-i18n="aboutSection.p3">
-            Nuestra visión es consolidarnos como un socio comercial estratégico y confiable para importadores, supermercados y distribuidores en los mercados globales.
+            Trabajamos con una clara orientación al cliente B2B, combinando tecnología de empaque, cadena de frío rigurosa y un equipo humano enfocado en la satisfacción de importadores y distribuidores globales.
           </p>
         </div>
 
-        <div class="about-visual reveal-on-scroll" data-lightbox-src="images-asparagus/cosecha-esparrago.webp" data-lightbox-title="Campo de cultivo y cosecha de espárragos" style="cursor: pointer;">
-          <img src="images-asparagus/cosecha-esparrago.webp" alt="Campo de cultivo y cosecha de espárragos" class="about-img">
+        <div class="about-visual reveal-on-scroll" data-lightbox-src="images-asparagus/cosecha-esparrago.webp" data-lightbox-title="Cosecha de espárragos frescos en campos de la costa peruana" style="cursor: pointer;">
+          <img decoding="async" src="images-asparagus/campo.webp" alt="Campo de cultivo y cosecha de espárragos" class="about-img">
+        </div>
+      </div>
+
+      <!-- KPI Metrics Grid -->
+      <div class="about-kpi-grid reveal-on-scroll">
+        <div class="kpi-card">
+          <div class="kpi-number" data-target="1">1+</div>
+          <div class="kpi-title" data-i18n="aboutSection.stat1Title">Años de Trayectoria</div>
+          <div class="kpi-desc" data-i18n="aboutSection.stat1Desc">Experiencia acumulada en la agroexportación peruana</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-number">100%</div>
+          <div class="kpi-title" data-i18n="aboutSection.stat2Title">Sostenibilidad</div>
+          <div class="kpi-desc" data-i18n="aboutSection.stat2Desc">Gestión eficiente de agua, suelo y recursos naturales</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-number">Norte & Sur</div>
+          <div class="kpi-title" data-i18n="aboutSection.stat3Title">Valles Costeros</div>
+          <div class="kpi-desc" data-i18n="aboutSection.stat3Desc">Producción constante con suelos y clima óptimos</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-number">Global</div>
+          <div class="kpi-title" data-i18n="aboutSection.stat4Title">Enfoque B2B</div>
+          <div class="kpi-desc" data-i18n="aboutSection.stat4Desc">Atención directa a importadores y supermercados</div>
+        </div>
+      </div>
+
+      <!-- Mission & Vision Pillars -->
+      <div class="pillars-grid reveal-on-scroll">
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="pillar-title" data-i18n="aboutSection.missionTitle">Misión</h3>
+          <p class="pillar-desc" data-i18n="aboutSection.missionDesc">
+            Brindar espárragos frescos de calidad superior de acuerdo a las necesidades de cada cliente, consolidando relaciones comerciales duraderas a través de la excelencia y la confiabilidad.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="pillar-title" data-i18n="aboutSection.visionTitle">Visión</h3>
+          <p class="pillar-desc" data-i18n="aboutSection.visionDesc">
+            Convertirnos en un referente agroexportador reconocido internacionalmente, impulsado por la innovación tecnológica constante, la agricultura sostenible y la ampliación de mercados.
+          </p>
+        </div>
+      </div>
+
+      <!-- Core Values Cards Grid -->
+      <div class="values-wrapper reveal-on-scroll">
+        <h3 class="values-header-title" data-i18n="aboutSection.valuesTitle">Valores Fundamentales</h3>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="value-content">
+              <h4 class="value-title" data-i18n="aboutSection.val1">Lealtad y Compromiso</h4>
+              <p class="value-desc" data-i18n="aboutSection.val1Desc">Firme compromiso con la puntualidad, volúmenes pactados y satisfacción de nuestros socios comerciales.</p>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="value-content">
+              <h4 class="value-title" data-i18n="aboutSection.val2">Honestidad y Transparencia</h4>
+              <p class="value-desc" data-i18n="aboutSection.val2Desc">Transparencia total en la gestión operativa, la trazabilidad del producto y la comunicación comercial.</p>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div class="value-content">
+              <h4 class="value-title" data-i18n="aboutSection.val3">Dinamismo e Innovación</h4>
+              <p class="value-desc" data-i18n="aboutSection.val3Desc">Adaptación ágil a las exigencias del mercado y mejora continua en nuestros procesos de empaque.</p>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Certifications & Standards Banner -->
+      <div class="about-certs-block reveal-on-scroll">
+        <div class="certs-header">
+          <span class="section-badge badge-gold" data-i18n="aboutSection.certsBadge">Estándares de Exportación</span>
+          <h3 class="certs-title" data-i18n="aboutSection.certsTitle">Garantía de Calidad y Certificaciones</h3>
+        </div>
+
+        <div class="certs-grid">
+          <div class="cert-card">
+            <div class="cert-badge-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h4 class="cert-title" data-i18n="aboutSection.cert1Title">Cumplimiento Fitosanitario</h4>
+            <p class="cert-desc" data-i18n="aboutSection.cert1Desc">Inspecciones de origen y certificación SENASA para embarques internacionales sin contratiempos.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-7l7-7-1.414-1.414L11 12.172l-2.586-2.586L7 11l4 4z"/></svg>
+            </div>
+            <h4 class="cert-title" data-i18n="aboutSection.cert2Title">Buenas Prácticas Agrícolas</h4>
+            <p class="cert-desc" data-i18n="aboutSection.cert2Desc">Protocolos de cultivo y cosecha higiénica orientados a normativas internacionales como GlobalG.A.P.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-7L10 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2z"/></svg>
+            </div>
+            <h4 class="cert-title" data-i18n="aboutSection.cert3Title">Inocuidad e Higiene</h4>
+            <p class="cert-desc" data-i18n="aboutSection.cert3Desc">Cadena de frío continua e inspección en planta para garantizar la máxima frescura en anaquel.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -876,7 +1166,7 @@
        ========================================================================== -->
   <section class="cta-banner-section">
     <div class="cta-banner-bg">
-      <img src="images-asparagus/1000505104.jpg" alt="Espárragos frescos listos para exportación">
+      <img decoding="async" src="images-asparagus/1000505104.webp" alt="Espárragos frescos listos para exportación">
     </div>
 
     <div class="container cta-banner-content reveal-on-scroll">
@@ -899,6 +1189,10 @@
   </section>
 
 
+  </div><!-- /#view-nosotros -->
+
+  <!-- VISTA CONTACTO -->
+  <div class="site-view" id="view-contacto">
   <!-- ==========================================================================
        13. B2B QUOTATION FORM
        ========================================================================== -->
@@ -950,9 +1244,12 @@
               <label for="product-select" class="form-label" data-i18n="formSection.fieldProduct">Producto o presentación de interés</label>
               <select id="product-select" name="product" class="form-control" required>
                 <option value="" disabled selected data-i18n="formSection.optionSelect">Seleccione una opción...</option>
-                <option value="Espárrago fresco verde - Cajas con atados (Bunched)" data-i18n="formSection.option1">Espárrago fresco verde - Cajas con atados (Bunched)</option>
-                <option value="Espárrago fresco verde - A granel (Loose / Bulk)" data-i18n="formSection.option2">Espárrago fresco verde - A granel (Loose / Bulk)</option>
-                <option value="Puntas de espárrago (Tips)" data-i18n="formSection.option3">Puntas de espárrago (Tips)</option>
+                <option value="Espárrago fresco verde - Cajas con atados (Bunched)" data-i18n="formSection.option1">Presentación Five Crowns - Cajas con atados (Bunched)</option>
+                <option value="Espárrago fresco verde - A granel (Loose / Bulk)" data-i18n="formSection.option2">Presentación Gourmet - A granel (Loose / Bulk)</option>
+                <option value="Puntas de espárrago (Tips)" data-i18n="formSection.option3">Presentación Square - Puntas de espárrago (Tips)</option>
+                <option value="Espárrago fresco verde - Lonchera (Pouch Bag / Snacking)" data-i18n="formSection.option6">Presentación Lonchera Espaceite S.L (Pouch Bag)</option>
+                <option value="Espárrago fresco verde - Presentación 17x300" data-i18n="formSection.option7">Presentación Garcia Mateo & Sinova - Corte 17x300</option>
+                <option value="Espárrago fresco verde - Presentación STD 20x250" data-i18n="formSection.option8">Presentación Standard - STD 20x250</option>
                 <option value="Requerimiento personalizado / Otro" data-i18n="formSection.option4">Requerimiento personalizado / Otro</option>
               </select>
             </div>
@@ -993,6 +1290,70 @@
   </a>
 
 
+  </div><!-- /#view-contacto -->
+  </main><!-- /.views-wrapper -->
+
+
+    <!-- ==========================================================================
+       15. FOOTER
+       ========================================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <img decoding="async" src="Imagenes/LOGO-BRIVIASHAN-WHITE.svg" alt="BRIVIASHAN Agroexportaciones EIRL" class="footer-logo">
+          <p class="footer-desc" data-i18n="footer.desc">
+            Exportación de espárrago fresco peruano de calidad premium para compradores internacionales.
+          </p>
+          <span class="section-badge badge-gold" style="align-self: flex-start;" data-i18n="footer.originBadge">
+            Hecho en Perú para el Mundo
+          </span>
+        </div>
+
+        <!-- Links Column -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.quickLinks">Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="#producto" class="footer-link" data-i18n="nav.product">Producto</a></li>
+            <li><a href="#explorador" class="footer-link" data-i18n="nav.interactive">Explorador</a></li>
+            <li><a href="#proceso" class="footer-link" data-i18n="nav.process">Proceso</a></li>
+            <li><a href="#calidad" class="footer-link" data-i18n="nav.quality">Calidad</a></li>
+            <li><a href="#nosotros" class="footer-link" data-i18n="nav.about">Nosotros</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.contactInfo">Contacto de Calidad</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>calidad@briviashan.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+51 984 100 809</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Macabi Bajo - Paijan - La Libertad </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 BRIVIASHAN AGROEXPORTACIONES EIRL. <span data-i18n="footer.rights">Todos los derechos reservados.</span></span>
+        <span>Del campo peruano a los mercados internacionales.</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================================================
+       GLOBAL MODALS (OUTSIDE ALL VIEWS)
+       ========================================================================== -->
   <!-- ==========================================================================
        SUCCESS MODAL
        ========================================================================== -->
@@ -1012,7 +1373,6 @@
     </div>
   </div>
 
-
   <!-- ==========================================================================
        IMAGE LIGHTBOX MODAL
        ========================================================================== -->
@@ -1022,73 +1382,31 @@
       <button type="button" class="lightbox-close-btn" id="close-lightbox-btn" aria-label="Cerrar">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
-      <div class="lightbox-img-wrapper">
-        <img id="lightbox-img" src="" alt="" class="lightbox-img">
+      <!-- Single Image Wrapper -->
+      <div class="lightbox-img-wrapper" id="lightbox-single-wrapper">
+        <img decoding="async" id="lightbox-img" src="" alt="" class="lightbox-img">
       </div>
+      <!-- Multi/Dual Image Wrapper -->
+      <div class="lightbox-multi-wrapper" id="lightbox-multi-wrapper" style="display: none;"></div>
       <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
+
+
+    <!-- Scripts -->
+  <script src="js/translations.js?v=1.1.3"></script>
+  <script src="js/app.js?v=1.1.3"></script>
+
+
+  
+
+
+
+  
   </div>
 
 
-  <!-- ==========================================================================
-       15. FOOTER
-       ========================================================================== -->
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Brand Column -->
-        <div class="footer-brand">
-          <img src="Imagenes/LOGO-BRIVIASHAN-WHITE.svg" alt="BRIVIASHAN Agroexportaciones EIRL" class="footer-logo">
-          <p class="footer-desc" data-i18n="footer.desc">
-            Exportación de espárrago fresco peruano de calidad premium para compradores internacionales.
-          </p>
-          <span class="section-badge badge-gold" style="align-self: flex-start;" data-i18n="footer.originBadge">
-            Hecho en Perú para el Mundo
-          </span>
-        </div>
+  
+  
 
-        <!-- Links Column -->
-        <div>
-          <h4 class="footer-heading" data-i18n="footer.quickLinks">Navegación</h4>
-          <ul class="footer-links-list">
-            <li><a href="#producto" class="footer-link" data-i18n="nav.product">Producto</a></li>
-            <li><a href="#explorador" class="footer-link" data-i18n="nav.interactive">Explorador</a></li>
-            <li><a href="#proceso" class="footer-link" data-i18n="nav.process">Proceso</a></li>
-            <li><a href="#calidad" class="footer-link" data-i18n="nav.quality">Calidad</a></li>
-            <li><a href="#exportacion" class="footer-link" data-i18n="nav.export">Exportación</a></li>
-            <li><a href="#nosotros" class="footer-link" data-i18n="nav.about">Nosotros</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Column -->
-        <div>
-          <h4 class="footer-heading" data-i18n="footer.contactInfo">Contacto de Calidad</h4>
-          <div class="footer-contact-list">
-            <div class="footer-contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <span>calidad@briviashan.com</span>
-            </div>
-            <div class="footer-contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span>+51 999 999 999</span>
-            </div>
-            <div class="footer-contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Perú (Valles Agroexportadores)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>&copy; 2026 BRIVIASHAN AGROEXPORTACIONES EIRL. <span data-i18n="footer.rights">Todos los derechos reservados.</span></span>
-        <span>Del campo peruano a los mercados internacionales.</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="js/translations.js"></script>
-  <script src="js/app.js"></script>
 </body>
 </html>

@@ -7,11 +7,11 @@ const translations = {
   es: {
     // Navigation
     nav: {
+      home: "Inicio",
       product: "Producto",
       interactive: "Explorador",
       process: "Proceso",
       quality: "Calidad",
-      export: "Exportación",
       about: "Nosotros",
       contact: "Contacto",
       cta: "Solicitar cotización",
@@ -20,7 +20,7 @@ const translations = {
 
     // Hero Section
     hero: {
-      badge: "Agroexportación de Origen Peruano",
+    
       title: "Espárrago peruano para mercados internacionales",
       subtitle: "Calidad, frescura y compromiso desde el origen hasta su destino.",
       ctaPrimary: "Solicitar cotización",
@@ -45,6 +45,28 @@ const translations = {
       card4Desc: "Preparados para atender requerimientos específicos de importadores y distribuidores internacionales."
     },
 
+    // Executive Summary Quick Access Cards
+    executiveSummary: {
+      badge: "Navegación Rápida",
+      title: "Explora la información de tu interés",
+      subtitle: "Selecciona una categoría para ver los detalles completos de nuestra oferta agroexportadora.",
+      navProductTitle: "Nuestro Espárrago",
+      navProductDesc: "Especificaciones, calibres, formatos de empaque y explorador interactivo.",
+      navProductBtn: "Ver Producto",
+      navProcessTitle: "Trazabilidad & Proceso",
+      navProcessDesc: "Seguimiento riguroso paso a paso desde el corte en campo hasta el embarque.",
+      navProcessBtn: "Ver Proceso",
+      navQualityTitle: "Garantía & Calidad B2B",
+      navQualityDesc: "Inspecciones fitosanitarias, control de temperatura y motivos para elegirnos.",
+      navQualityBtn: "Ver Calidad",
+      navAboutTitle: "Nuestra Empresa",
+      navAboutDesc: "1+ años de trayectoria, agricultura sostenible, valores y certificaciones.",
+      navAboutBtn: "Ver Nosotros",
+      navContactTitle: "Cotización Internacional",
+      navContactDesc: "Formulario B2B directo y canales de atención rápida por WhatsApp y correo.",
+      navContactBtn: "Solicitar Cotización"
+    },
+
     // The Product Section
     productSection: {
       badge: "Ficha de Exportación",
@@ -55,13 +77,13 @@ const translations = {
       specTypeTitle: "Tipo de Producto",
       specTypeVal: "Espárrago verde fresco (Fresh Green Asparagus)",
       specCaliberTitle: "Calibres",
-      specCaliberVal: "[CALIBRES DISPONIBLES]",
+      specCaliberVal: "SM, STD, MD, LG, XL, JUMBO",
       specFormatTitle: "Presentaciones",
-      specFormatVal: "[PRESENTACIONES]",
+      specFormatVal: "12 X 420, 20 X 250, 10 X 520, 17 X 300.", 
       specWeightTitle: "Peso por caja",
-      specWeightVal: "[PESO POR CAJA]",
+      specWeightVal: "5 kg / 11 lbs (aprox.), según presentación",
       specPackingTitle: "Tipo de empaque",
-      specPackingVal: "[TIPO DE EMPAQUE]",
+      specPackingVal: "Caja de cartón corrugado grado exportación con atados, pads húmedos.",
       specConservationTitle: "Conservación",
       specConservationVal: "Cadena de frío continua (0.5°C a 2°C)",
       ctaQuote: "Cotizar este producto"
@@ -135,25 +157,6 @@ const translations = {
       certTag1: "Inocuidad & Calidad",
       certTag2: "Práctica Social"
     },
-
-    // Export & Logistics Section
-    exportSection: {
-      badge: "Comercio Internacional",
-      title: "Capacidad para atender mercados internacionales",
-      subtitle: "Estructura logística preparada para conectar la producción peruana con importadores y distribuidores en los principales mercados globales.",
-      originLabel: "Origen",
-      originVal: "Perú (Valles Costeros)",
-      productLabel: "Producto",
-      productVal: "Espárrago verde fresco",
-      destLabel: "Destino",
-      destVal: "Mercados internacionales",
-      logisticsLabel: "Logística",
-      logisticsVal: "[INFORMACIÓN LOGÍSTICA / VÍA AÉREA Y MARÍTIMA]",
-      incotermsLabel: "Incoterms",
-      incotermsVal: "[INFORMACIÓN INCOTERMS: FOB, CIF, CFR]",
-      mapNote: "Rutas de exportación desde puertos y aeropuertos peruanos hacia compradores internacionales."
-    },
-
     // Why Work With Us
     whyUsSection: {
       badge: "Enfoque B2B",
@@ -172,39 +175,99 @@ const translations = {
     // Presentations / Formats
     presentationsSection: {
       badge: "Formatos de Exportación",
-      title: "Presentaciones disponibles",
+      title: "Presentaciones Solicitadas por nuestros Clientes",
       subtitle: "Ofrecemos diversas opciones de empaque adaptables a las demandas de su canal de distribución.",
       zoomText: "Ver imagen completa",
-      card1Name: "Presentación en Cajas con Atados (Bunched)",
-      card1Caliber: "Calibre: [CALIBRES DISPONIBLES]",
-      card1Format: "Presentación: [PRESENTACIONES - EJ. ATADOS CON LIGA]",
-      card1Weight: "Peso: [PESO POR CAJA - EJ. 5 KG / 11 LBS]",
-      card1Packing: "Empaque: [TIPO DE EMPAQUE - CAJA CARTÓN EXPORTACIÓN]",
+      card1Name: "Presentación Five Crowns",
+      card1Caliber: "Calibre: STD, MD",
+      card1Format: "Presentación: Esparrago verde fresco con tag five crowns",
+      card1Weight: "Peso: Atado de 325 grs a 335 grs (aprox.) / Caja - 5 kg / 11 lbs",
+      card1Packing: "Empaque: Caja de Polipropileno Alveolar grado exportación con pads húmedos",
       card1Btn: "Solicitar información",
 
-      card2Name: "Presentación a Granel (Loose / Bulk)",
-      card2Caliber: "Calibre: [CALIBRES DISPONIBLES]",
-      card2Format: "Presentación: [PRESENTACIONES - GRANEL SELECCIONADO]",
-      card2Weight: "Peso: [PESO POR CAJA - SEGÚN REQUERIMIENTO]",
-      card2Packing: "Empaque: [TIPO DE EMPAQUE - CAJA TELESCÓPICA O PLÁSTICA]",
+      card2Name: "Presentación Gourmet",
+      card2Caliber: "Calibre: SM, STD, MD, LG, XL, JUMBO",
+      card2Format: "Presentación: Esparrago verde fresco con tag Gourmet",
+      card2Weight: "Peso: Caja - 5 kg / 11 lbs",
+      card2Packing: "Empaque: Caja de Polipropileno Alveolar grado exportación con pads húmedos",
       card2Btn: "Solicitar información",
 
-      card3Name: "Puntas / Tips de Espárrago",
-      card3Caliber: "Calibre: [CALIBRES DISPONIBLES]",
-      card3Format: "Presentación: [PRESENTACIONES - CORTE DE PUNTAS SELECCIONADAS]",
-      card3Weight: "Peso: [PESO POR CAJA - SEGÚN REQUERIMIENTO]",
-      card3Packing: "Empaque: [TIPO DE EMPAQUE - FLOW PACK / CAJA]",
-      card3Btn: "Solicitar información"
+      card3Name: "Presentacion Square",
+      card3Caliber: "Calibre: STD",
+      card3Format: "Presentación: Puntas de espárrago seleccionadas y cortadas con tag",
+      card3Weight: "Peso: Atado - 520 grs a 530 grs (aprox.)",
+      card3Packing: "Empaque: Caja de Polipropileno Alveolar grado exportación con pads húmedos",
+      card3Btn: "Solicitar información",
+
+      card5Name: "Presentación Lonchera Espaceite S.L",
+      card5Caliber: "Calibre: LG",
+      card5Format: "Presentación:Bajin de Espárrago fresco en bolsa de carton y colocada en una lonchera de 2.5 Kg",
+      card5Weight: "Peso: Atado - 250 grs a 260 grs",
+      card5Packing: "Empaque: Lonchera de Polipropileno Alveolar grado exportación",
+      card5Btn: "Solicitar información",
+
+      card6Name: "Presentación Garcia Mateo & Sinova",
+      card6Caliber: "Calibre:  LG",
+      card6Format: "Presentación: Corte especial 17x300 mm con liga china",
+      card6Weight: "Peso: Atado - 300 grs a 310 grs",
+      card6Packing: "Empaque: caja de Polipropileno Alveolar grado exportación",
+      card6Btn: "Solicitar información",
+
+      card7Name: "Presentación Standard (STD 20x250)",
+      card7Caliber: "Calibre: STD",
+      card7Format: "Presentación: Corte Standard 20x250 mm seleccionado",
+      card7Weight: "Peso: Atado - Según requerimiento / Caja exportación",
+      card7Packing: "Empaque: Caja de Polipropileno Alveolar",
+      card7Btn: "Solicitar información"
     },
 
     // About Us
     aboutSection: {
       badge: "Nuestra Empresa",
-      title: "Conectamos el campo peruano con compradores de todo el mundo",
-      p1: "En BRIVIASHAN AGROEXPORTACIONES EIRL nos dedicamos a la producción, selección y exportación de espárragos frescos peruanos de la más alta calidad comercial.",
-      p2: "Trabajamos con un enfoque orientado a la satisfacción de compradores internacionales, combinando la riqueza agrícola de los valles del Perú con un riguroso control operativo, cadena de frío y atención personalizada.",
-      p3: "Nuestra visión es consolidarnos como un socio comercial estratégico y confiable para importadores, supermercados y distribuidores en los mercados globales.",
-      imageCaption: "[IMAGEN REAL DEL CAMPO Y EQUIPO DE COSECHA]"
+      title: "Excelencia y compromiso en la agroexportación peruana",
+      p1: "Somos una empresa peruana dedicada a la producción, selección y exportación de espárragos frescos verdes de calidad superior, cultivados en los valles más fértiles de la costa del Perú.",
+      p2: "Con más de 1 año de experiencia en el sector agroexportador, impulsamos una agricultura sostenible basada en la gestión eficiente de la tierra, el agua y los recursos naturales para abastecer a los mercados internacionales más exigentes.",
+      p3: "Trabajamos con una clara orientación al cliente B2B, combinando tecnología de empaque, cadena de frío rigurosa y un equipo humano enfocado en la satisfacción de importadores y distribuidores globales.",
+      imageCaption: "Cosecha de espárragos frescos en campos de la costa peruana",
+      
+      // KPIs
+      stat1Num: "14+",
+      stat1Title: "Años de Trayectoria",
+      stat1Desc: "Experiencia acumulada en la agroexportación peruana",
+      stat2Num: "100%",
+      stat2Title: "Sostenibilidad",
+      stat2Desc: "Gestión eficiente de agua, suelo y recursos naturales",
+      stat3Num: "Norte & Sur",
+      stat3Title: "Valles Costeros",
+      stat3Desc: "Producción constante con suelos y clima óptimos",
+      stat4Num: "Global",
+      stat4Title: "Enfoque B2B",
+      stat4Desc: "Atención directa a importadores y supermercados",
+
+      // Pillars
+      missionTitle: "Misión",
+      missionDesc: "Brindar espárragos frescos de calidad superior de acuerdo a las necesidades de cada cliente, consolidando relaciones comerciales duraderas a través de la excelencia y la confiabilidad.",
+      visionTitle: "Visión",
+      visionDesc: "Convertirnos en un referente agroexportador reconocido internacionalmente, impulsado por la innovación tecnológica constante, la agricultura sostenible y la ampliación de mercados.",
+
+      // Core Values
+      valuesTitle: "Valores Fundamentales",
+      val1: "Lealtad y Compromiso",
+      val1Desc: "Firme compromiso con la puntualidad, volúmenes pactados y satisfacción de nuestros socios comerciales.",
+      val2: "Honestidad y Transparencia",
+      val2Desc: "Transparencia total en la gestión operativa, la trazabilidad del producto y la comunicación comercial.",
+      val3: "Dinamismo e Innovación",
+      val3Desc: "Adaptación ágil a las exigencias del mercado y mejora continua en nuestros procesos de empaque.",
+
+      // Certifications
+      certsBadge: "Estándares de Exportación",
+      certsTitle: "Garantía de Calidad y Certificaciones",
+      cert1Title: "Cumplimiento Fitosanitario",
+      cert1Desc: "Inspecciones de origen y certificación SENASA para embarques internacionales sin contratiempos.",
+      cert2Title: "Buenas Prácticas Agrícolas",
+      cert2Desc: "Protocolos de cultivo y cosecha higiénica orientados a normativas internacionales como GlobalG.A.P.",
+      cert3Title: "Inocuidad e Higiene",
+      cert3Desc: "Cadena de frío continua e inspección en planta para garantizar la máxima frescura en anaquel."
     },
 
     // High Impact Final CTA & Contact
@@ -233,9 +296,12 @@ const translations = {
       placeholderPhone: "+1 (555) 000-0000",
       fieldProduct: "Producto o presentación de interés",
       optionSelect: "Seleccione una opción...",
-      option1: "Espárrago fresco verde - Cajas con atados (Bunched)",
-      option2: "Espárrago fresco verde - A granel (Loose / Bulk)",
-      option3: "Puntas de espárrago (Tips)",
+      option1: "Presentación Five Crowns - Cajas con atados (Bunched)",
+      option2: "Presentación Gourmet - A granel (Loose / Bulk)",
+      option3: "Presentación Square - Puntas de espárrago (Tips)",
+      option6: "Presentación Lonchera Espaceite S.L (Pouch Bag)",
+      option7: "Presentación Garcia Mateo & Sinova - Corte 17x300",
+      option8: "Presentación Standard - STD 20x250",
       option4: "Requerimiento personalizado / Otro",
       fieldQuantity: "Cantidad requerida estimada",
       placeholderQuantity: "Ej. 1 contenedor / pallets / cajas por semana",
@@ -266,11 +332,11 @@ const translations = {
   en: {
     // Navigation
     nav: {
+      home: "Home",
       product: "Product",
       interactive: "Explorer",
       process: "Process",
       quality: "Quality",
-      export: "Export",
       about: "About Us",
       contact: "Contact",
       cta: "Request a Quote",
@@ -302,6 +368,28 @@ const translations = {
       card3Desc: "Rigorous monitoring from harvest in the field to final pre-shipment dispatch inspection.",
       card4Title: "Export-ready",
       card4Desc: "Prepared to meet custom specifications of international importers, wholesalers, and supermarket distributors."
+    },
+
+    // Executive Summary Quick Access Cards
+    executiveSummary: {
+      badge: "Quick Navigation",
+      title: "Explore the Information You Need",
+      subtitle: "Select a category below to access dedicated details of our export operations.",
+      navProductTitle: "Our Fresh Asparagus",
+      navProductDesc: "Specifications, available calibers, packaging formats, and interactive inspection.",
+      navProductBtn: "View Product",
+      navProcessTitle: "Traceability & Process",
+      navProcessDesc: "Rigorous step-by-step tracking from field harvest to final shipment.",
+      navProcessBtn: "View Process",
+      navQualityTitle: "Quality & B2B Assurance",
+      navQualityDesc: "Phytosanitary inspection, temperature control, and supplier reliability.",
+      navQualityBtn: "View Quality",
+      navAboutTitle: "About Our Company",
+      navAboutDesc: "14+ years of experience, sustainable agriculture, core values & certifications.",
+      navAboutBtn: "View About Us",
+      navContactTitle: "International Quotations",
+      navContactDesc: "Direct B2B form and swift customer support via WhatsApp and email.",
+      navContactBtn: "Request a Quote"
     },
 
     // The Product Section
@@ -394,25 +482,6 @@ const translations = {
       certTag1: "Food Safety & Quality",
       certTag2: "Social Compliance"
     },
-
-    // Export & Logistics Section
-    exportSection: {
-      badge: "Global Trade",
-      title: "Capacity to serve international markets",
-      subtitle: "Robust logistics infrastructure connecting Peruvian agricultural excellence with importers and distributors worldwide.",
-      originLabel: "Origin",
-      originVal: "Peru (Coastal Valleys)",
-      productLabel: "Product",
-      productVal: "Fresh Green Asparagus",
-      destLabel: "Destination",
-      destVal: "International Markets",
-      logisticsLabel: "Logistics",
-      logisticsVal: "[LOGISTICS INFO / AIR & OCEAN FREIGHT]",
-      incotermsLabel: "Incoterms",
-      incotermsVal: "[INCOTERMS: FOB, CIF, CFR]",
-      mapNote: "Direct export routes from Peruvian ports and international airports to global buyers."
-    },
-
     // Why Work With Us
     whyUsSection: {
       badge: "B2B Focus",
@@ -453,17 +522,77 @@ const translations = {
       card3Format: "Presentation: [PRESENTATIONS - TRIMMED SELECT TIPS]",
       card3Weight: "Weight: [WEIGHT PER BOX - AS PER CUSTOMER REQUIREMENT]",
       card3Packing: "Packaging: [PACKAGING TYPE - FLOW PACK / BOX]",
-      card3Btn: "Inquire about format"
+      card3Btn: "Inquire about format",
+
+      card5Name: "Pouch / Lunchbox Bag Presentation",
+      card5Caliber: "Caliber: [AVAILABLE CALIBERS]",
+      card5Format: "Presentation: [PRESENTATIONS - LUNCHBOX BAG / POUCH]",
+      card5Weight: "Weight: [WEIGHT PER BAG / BOX - AS PER REQUIREMENT]",
+      card5Packing: "Packaging: [PACKAGING TYPE - MAP POUCH / MASTER BOX]",
+      card5Btn: "Inquire about format",
+
+      card6Name: "17x300 Presentation (Special Cut & Format)",
+      card6Caliber: "Caliber: [AVAILABLE CALIBERS]",
+      card6Format: "Presentation: [PRESENTATIONS - SPECIAL CUT 17x300 MM]",
+      card6Weight: "Weight: [WEIGHT PER BOX / PACK - AS PER REQUIREMENT]",
+      card6Packing: "Packaging: [PACKAGING TYPE - EXPORT BOX / MAP]",
+      card6Btn: "Inquire about format",
+
+      card7Name: "Standard Presentation (STD 20x250)",
+      card7Caliber: "Caliber: STD",
+      card7Format: "Presentation: Selected Standard Cut 20x250 mm",
+      card7Weight: "Weight: Bunch - As per requirement / Export Box",
+      card7Packing: "Packaging: Corrugated / Polypropylene Export Box",
+      card7Btn: "Inquire about format"
     },
 
     // About Us
     aboutSection: {
-      badge: "About Company",
-      title: "Connecting the Peruvian field with global buyers",
-      p1: "At BRIVIASHAN AGROEXPORTACIONES EIRL we specialize in the production, selection, and export of premium fresh Peruvian green asparagus.",
-      p2: "We operate with a customer-centric focus tailored for international produce buyers, uniting the fertile agricultural richness of Peru with rigorous quality control, cold chain integrity, and proactive communication.",
-      p3: "Our vision is to serve as a reliable, long-term strategic commercial partner for importers, supermarkets, and distributors across international markets.",
-      imageCaption: "[REAL PHOTO OF FIELD AND HARVEST TEAM]"
+      badge: "About Our Company",
+      title: "Excellence and Commitment in Peruvian Agro-Export",
+      p1: "We are a Peruvian company dedicated to the cultivation, selection, and export of premium fresh green asparagus, harvested in the most fertile coastal valleys of Peru.",
+      p2: "With over 14 years of experience in agricultural export, we promote sustainable farming based on efficient land, water, and natural resource management to supply demanding international markets.",
+      p3: "We operate with a strong B2B focus, pairing packing house technology, strict cold chain management, and dedicated customer service for global importers and distributors.",
+      imageCaption: "Fresh asparagus harvest in Peruvian coastal fields",
+
+      // KPIs
+      stat1Num: "14+",
+      stat1Title: "Years of Experience",
+      stat1Desc: "Accumulated expertise in Peruvian agro-export",
+      stat2Num: "100%",
+      stat2Title: "Sustainability",
+      stat2Desc: "Efficient management of land, water & soil",
+      stat3Num: "North & South",
+      stat3Title: "Coastal Valleys",
+      stat3Desc: "Year-round production in ideal climates",
+      stat4Num: "Global",
+      stat4Title: "B2B Focus",
+      stat4Desc: "Direct service to importers & supermarket chains",
+
+      // Pillars
+      missionTitle: "Mission",
+      missionDesc: "To deliver superior fresh asparagus tailored to each international client's requirements, building long-term commercial relationships through reliability and product excellence.",
+      visionTitle: "Vision",
+      visionDesc: "To become an internationally recognized agro-export leader, driven by continuous technological innovation, agricultural sustainability, and market expansion.",
+
+      // Core Values
+      valuesTitle: "Core Values",
+      val1: "Loyalty & Commitment",
+      val1Desc: "Firm dedication to delivery schedules, contracted volumes, and commercial satisfaction.",
+      val2: "Honesty & Transparency",
+      val2Desc: "Full operational transparency, product traceability, and direct client communication.",
+      val3: "Dynamism & Innovation",
+      val3Desc: "Swift adaptability to global market demands and continuous packing house improvements.",
+
+      // Certifications
+      certsBadge: "Export Standards",
+      certsTitle: "Quality Assurance & Certifications",
+      cert1Title: "Phytosanitary Compliance",
+      cert1Desc: "Origin inspections and SENASA certification for seamless international customs clearance.",
+      cert2Title: "Good Agricultural Practices",
+      cert2Desc: "Hygienic cultivation and harvesting protocols aligned with GlobalG.A.P. standards.",
+      cert3Title: "Safety & Cold Chain Integrity",
+      cert3Desc: "Continuous cold chain tracking and plant inspection to guarantee shelf-life freshness."
     },
 
     // High Impact Final CTA & Contact
@@ -492,9 +621,12 @@ const translations = {
       placeholderPhone: "+1 (555) 000-0000",
       fieldProduct: "Product or Presentation of Interest",
       optionSelect: "Select an option...",
-      option1: "Fresh Green Asparagus - Bunched Boxes",
-      option2: "Fresh Green Asparagus - Loose / Bulk",
-      option3: "Asparagus Tips Format",
+      option1: "Five Crowns Presentation - Bunched Boxes",
+      option2: "Gourmet Presentation - Loose / Bulk",
+      option3: "Square Presentation - Asparagus Tips",
+      option6: "Lunchbox Presentation - Espaceite S.L (Pouch Bag)",
+      option7: "Garcia Mateo & Sinova Presentation - 17x300 Cut",
+      option8: "Standard Presentation - STD 20x250",
       option4: "Custom Packaging / Other Specification",
       fieldQuantity: "Estimated Required Volume",
       placeholderQuantity: "E.g. 1 container / pallets / boxes per week",
