@@ -101,7 +101,7 @@ const translations = {
       point3Title: "Selección en Packing",
       point3Desc: "Inspección individual para descartar defectos mecánicos, asegurando color verde intenso y aspecto impecable.",
       point4Title: "Empaque y Protección",
-      point4Desc: "Opciones de atado con ligas, pads húmedos, bolsas con atmósfera y cajas resistentes a la humedad: [TIPO DE EMPAQUE]."
+      point4Desc: "Opciones de atado con ligas, pads húmedos, bolsas con atmósfera y cajas resistentes a la humedad: caja de Polipropileno."
     },
 
     // Timeline: From Field to Destination
@@ -298,7 +298,7 @@ const translations = {
       optionSelect: "Seleccione una opción...",
       option1: "Presentación Five Crowns - Cajas con atados (Bunched)",
       option2: "Presentación Gourmet - A granel (Loose / Bulk)",
-      option3: "Presentación Square - Puntas de espárrago (Tips)",
+      option3: "Presentación Square - Puntas de espárrago",
       option6: "Presentación Lonchera Espaceite S.L (Pouch Bag)",
       option7: "Presentación Garcia Mateo & Sinova - Corte 17x300",
       option8: "Presentación Standard - STD 20x250",
