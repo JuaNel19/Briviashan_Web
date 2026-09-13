@@ -208,9 +208,39 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = `<span class="spinner"></span> ${t.submitting}`;
 
+      const formAction = rfqForm.getAttribute('action');
       const accessKey = rfqForm.getAttribute('data-web3forms-key');
 
-      if (accessKey) {
+      if (formAction && formAction.includes('formspree.io')) {
+        // Enviar vía API de Formspree
+        try {
+          const formData = new FormData(rfqForm);
+          const response = await fetch(formAction, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            if (successModal) {
+              successModal.classList.add('is-visible');
+              document.body.style.overflow = 'hidden';
+            }
+            rfqForm.reset();
+          } else {
+            const data = await response.json();
+            alert(data.error || (data.errors ? data.errors.map(err => err.message).join(', ') : "Error al enviar la solicitud a Formspree."));
+          }
+        } catch (err) {
+          console.error("Error al enviar el formulario a Formspree:", err);
+          alert("Error de conexión al enviar la cotización. Por favor intenta por WhatsApp.");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      } else if (accessKey) {
         // Enviar vía API de Web3Forms
         try {
           const formData = new FormData(rfqForm);

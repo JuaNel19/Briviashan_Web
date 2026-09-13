@@ -28,7 +28,7 @@ if (!$name || !$email) {
 }
 
 // 2. Configurar correo de destino en tu cPanel (Cambia este correo por el tuyo)
-$to = "calidad@briviashan.com"; 
+$to = "juareznelsonelias@gmail.com"; 
 $subject = "=?UTF-8?B?" . base64_encode("Nueva Cotización Internacional - " . $name) . "?=";
 
 // 3. Construir mensaje en texto plano
