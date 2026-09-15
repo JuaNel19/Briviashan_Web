@@ -4728,4 +4728,85 @@ textarea.form-control {
   }
 }
 
+/* ==========================================================================
+   PROCESS HERO BLOCK RESPONSIVE FIX (MOBILE & TABLET CENTERING)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .process-hero-block,
+  .site-view .process-hero-block {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+    padding: 1.75rem 1.25rem !important;
+    margin: 0 auto 2.5rem auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .process-hero-img-box {
+    height: 250px !important;
+    width: 100% !important;
+  }
+
+  .process-hero-content {
+    width: 100% !important;
+    gap: 1rem !important;
+  }
+
+  .process-hero-title,
+  .site-view .process-hero-title {
+    font-size: 1.45rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .process-hero-desc,
+  .site-view .process-hero-desc {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .process-highlights-grid {
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+
+  .process-highlight-item {
+    padding: 0.75rem 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .process-hero-block,
+  .site-view .process-hero-block {
+    padding: 1.35rem 1rem !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .process-hero-img-box {
+    height: 210px !important;
+  }
+
+  .process-badge-tag {
+    font-size: 0.75rem !important;
+    padding: 0.35rem 0.85rem !important;
+    bottom: 0.75rem !important;
+    left: 0.75rem !important;
+  }
+
+  .process-hero-title,
+  .site-view .process-hero-title {
+    font-size: 1.3rem !important;
+  }
+
+  .highlight-info strong {
+    font-size: 0.88rem !important;
+  }
+
+  .highlight-info span {
+    font-size: 0.78rem !important;
+  }
+}
+
+
 
