@@ -106,15 +106,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Header Scroll Effect
+  // 3. Header Scroll Effect & View Color State
   const header = document.getElementById('main-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+  function checkHeaderScroll() {
+    if (header) {
+      const activeView = document.querySelector('.site-view.is-active');
+      const activeViewId = activeView ? activeView.getAttribute('id') : 'view-inicio';
+      
+      // If not on the dark hero view-inicio, OR if scrolled down > 40px, apply white header with dark text
+      if (activeViewId !== 'view-inicio' || window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
     }
-  });
+  }
+  window.addEventListener('scroll', checkHeaderScroll, { passive: true });
+  checkHeaderScroll();
 
   // 4. Interactive Product Hotspots
   let activeHotspotIndex = 1;
@@ -338,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const msg = currentLang === 'es'
         ? "Hola, estoy interesado en recibir información comercial y cotización de espárragos frescos peruanos de BRIVIASHAN."
         : "Hello, I am interested in receiving commercial information and a quotation for fresh Peruvian asparagus from BRIVIASHAN.";
-      const phone = "51984100809"; 
+      const phone = "51926640784"; 
       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
     });
   });
@@ -548,6 +556,9 @@ document.addEventListener('DOMContentLoaded', () => {
       el.classList.add('revealed');
     });
 
+    // Update header background and text colors based on view type
+    checkHeaderScroll();
+
     // Trigger KPI counters if opening Nosotros
     if (viewId === '#view-nosotros') {
       setTimeout(triggerKpiCounters, 200);
@@ -585,14 +596,289 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Handle browser back / forward buttons (hashchange)
-  window.addEventListener('hashchange', () => {
-    const hash = window.location.hash || '#inicio';
-    switchView(hash);
-  });
+  // 11. Interactive Client Logo Slideshow Controller
+  function initClientSlideshow() {
+    const slideTrack = document.getElementById('clientsSlideTrack');
+    const slides = document.querySelectorAll('.client-slide-card');
+    const prevBtn = document.getElementById('clientsPrevBtn');
+    const nextBtn = document.getElementById('clientsNextBtn');
+    const dots = document.querySelectorAll('#clientsPagination .slideshow-dot');
+    let currentClientSlide = 0;
+    let clientAutoplayTimer = null;
+
+    if (!slideTrack || slides.length === 0) return;
+
+    function updateClientSlideshow(index) {
+      currentClientSlide = (index + slides.length) % slides.length;
+      slideTrack.style.transform = `translateX(-${currentClientSlide * 100}%)`;
+      
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentClientSlide);
+      });
+    }
+
+    function startClientAutoplay() {
+      stopClientAutoplay();
+      clientAutoplayTimer = setInterval(() => {
+        updateClientSlideshow(currentClientSlide + 1);
+      }, 4000);
+    }
+
+    function stopClientAutoplay() {
+      if (clientAutoplayTimer) {
+        clearInterval(clientAutoplayTimer);
+        clientAutoplayTimer = null;
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        updateClientSlideshow(currentClientSlide - 1);
+        startClientAutoplay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        updateClientSlideshow(currentClientSlide + 1);
+        startClientAutoplay();
+      });
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const slideIdx = parseInt(dot.getAttribute('data-slide'), 10);
+        updateClientSlideshow(slideIdx);
+        startClientAutoplay();
+      });
+    });
+
+    const slideshowContainer = document.getElementById('clientsSlideshow');
+    if (slideshowContainer) {
+      slideshowContainer.addEventListener('mouseenter', stopClientAutoplay);
+      slideshowContainer.addEventListener('mouseleave', startClientAutoplay);
+    }
+
+    updateClientSlideshow(0);
+    startClientAutoplay();
+  }
+
+  // 12. Interactive Product Presentations 3D Carousel Controller
+  function initProductCarousel() {
+    const carouselTrack = document.getElementById('prodCarouselTrack');
+    const items = document.querySelectorAll('.prod-card-item');
+    const prevBtn = document.getElementById('prodCarouselPrev');
+    const nextBtn = document.getElementById('prodCarouselNext');
+    const dots = document.querySelectorAll('#prodCarouselDots .prod-dot');
+    let currentIndex = 0;
+    let autoplayTimer = null;
+
+    if (!carouselTrack || items.length === 0) return;
+
+    function getItemsPerPage() {
+      const w = window.innerWidth;
+      if (w <= 640) return 1;
+      if (w <= 1024) return 2;
+      return 3;
+    }
+
+    function updateCarousel(index) {
+      const itemsPerPage = getItemsPerPage();
+      currentIndex = (index + items.length) % items.length;
+
+      // Translate track
+      const itemWidthPercent = 100 / itemsPerPage;
+      carouselTrack.style.transform = `translateX(-${currentIndex * itemWidthPercent}%)`;
+
+      // Update Center Highlight Class
+      items.forEach((item, idx) => {
+        item.classList.remove('is-center');
+        if (itemsPerPage === 3) {
+          // Center item in a 3-item view is currentIndex + 1
+          if (idx === (currentIndex + 1) % items.length) {
+            item.classList.add('is-center');
+          }
+        } else if (itemsPerPage === 2) {
+          if (idx === currentIndex) {
+            item.classList.add('is-center');
+          }
+        } else {
+          // 1 item (mobile)
+          if (idx === currentIndex) {
+            item.classList.add('is-center');
+          }
+        }
+      });
+
+      // Update Dots
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(() => {
+        updateCarousel(currentIndex + 1);
+      }, 5000);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        updateCarousel(currentIndex - 1);
+        startAutoplay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        updateCarousel(currentIndex + 1);
+        startAutoplay();
+      });
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-index'), 10);
+        updateCarousel(idx);
+        startAutoplay();
+      });
+    });
+
+    const wrapper = document.getElementById('productCarousel');
+    if (wrapper) {
+      wrapper.addEventListener('mouseenter', stopAutoplay);
+      wrapper.addEventListener('mouseleave', startAutoplay);
+    }
+
+    window.addEventListener('resize', () => {
+      updateCarousel(currentIndex);
+    });
+
+    updateCarousel(0);
+    startAutoplay();
+  }
+
+  // 13. Product Details Modal ("Ver detalles") Logic
+  function initProductDetailsModal() {
+    const detailModal = document.getElementById('product-detail-modal');
+    const closeBtn = document.getElementById('close-prod-detail-btn');
+    const backdrop = document.getElementById('prod-modal-backdrop');
+    const viewButtons = document.querySelectorAll('.prod-view-details-btn');
+
+    if (!detailModal) return;
+
+    function openModal(data) {
+      document.getElementById('prod-modal-title').textContent = data.title || '';
+      document.getElementById('prod-modal-img').src = data.img || '';
+      document.getElementById('prod-modal-img').alt = data.title || '';
+      document.getElementById('prod-modal-desc').textContent = data.desc || '';
+      document.getElementById('prod-modal-weight').textContent = data.weight || '';
+      document.getElementById('prod-modal-caliber').textContent = data.caliber || '';
+      document.getElementById('prod-modal-packing').textContent = data.packing || '';
+
+      detailModal.classList.add('is-visible');
+      detailModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      detailModal.classList.remove('is-visible');
+      detailModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    viewButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const data = {
+          title: btn.getAttribute('data-title'),
+          img: btn.getAttribute('data-img'),
+          desc: btn.getAttribute('data-desc'),
+          weight: btn.getAttribute('data-weight'),
+          caliber: btn.getAttribute('data-caliber'),
+          packing: btn.getAttribute('data-packing')
+        };
+        openModal(data);
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && detailModal.classList.contains('is-visible')) {
+        closeModal();
+      }
+    });
+  }
+
+  // Technical Specifications Gallery (Thumbnail switcher & Next/Prev navigation)
+  function initTechSpecGallery() {
+    const mainImg = document.getElementById('techSpecMainImg');
+    const thumbRow = document.getElementById('techSpecThumbRow');
+    const prevBtn = document.getElementById('techSpecPrevBtn');
+    const nextBtn = document.getElementById('techSpecNextBtn');
+
+    if (!mainImg || !thumbRow) return;
+
+    const thumbs = Array.from(thumbRow.querySelectorAll('.tech-spec-thumb'));
+    let currentIndex = 0;
+
+    function setImage(index) {
+      if (index < 0) index = thumbs.length - 1;
+      if (index >= thumbs.length) index = 0;
+      currentIndex = index;
+
+      const targetSrc = thumbs[currentIndex].getAttribute('data-src');
+      mainImg.style.opacity = '0.3';
+      setTimeout(() => {
+        mainImg.src = targetSrc;
+        mainImg.style.opacity = '1';
+      }, 150);
+
+      thumbs.forEach((t, i) => {
+        if (i === currentIndex) {
+          t.classList.add('active');
+          t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          t.classList.remove('active');
+        }
+      });
+    }
+
+    thumbs.forEach((thumb, idx) => {
+      thumb.addEventListener('click', () => {
+        setImage(idx);
+      });
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        setImage(currentIndex - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        setImage(currentIndex + 1);
+      });
+    }
+  }
 
   // Initialize
   updateLanguage('es');
+  initClientSlideshow();
+  initProductCarousel();
+  initProductDetailsModal();
+  initTechSpecGallery();
   const initialHash = window.location.hash || '#inicio';
   switchView(initialHash);
 });

@@ -12,6 +12,7 @@ const translations = {
       interactive: "Explorador",
       process: "Proceso",
       quality: "Calidad",
+      clients: "Clientes",
       about: "Nosotros",
       contact: "Contacto",
       cta: "Solicitar cotización",
@@ -20,12 +21,11 @@ const translations = {
 
     // Hero Section
     hero: {
-    
-      title: "Espárrago peruano para mercados internacionales",
-      subtitle: "Calidad, frescura y compromiso desde el origen hasta su destino.",
+      tagline: "DEL CAMPO PERUANO AL MUNDO",
+      title: "ESPÁRRAGO FRESCO Y DE CALIDAD",
+      subtitle: "Cultivados y seleccionados en los valles más fértiles del Perú, cosechamos espárragos verdes de calidad superior. Recién cortados del campo, de calidad y frescura excelentes, nuestros espárragos son el complemento ideal para compradores e importadores internacionales.",
       ctaPrimary: "Solicitar cotización",
-      ctaSecondary: "Conocer nuestro producto",
-      tagline: "Del campo peruano a los mercados internacionales",
+      ctaSecondary: "Ver Productos",
       statOrigin: "Origen 100% Peruano",
       statColdChain: "Cadena de frío controlada",
       statQuality: "Estándares de exportación"
@@ -43,6 +43,12 @@ const translations = {
       card3Desc: "Seguimiento riguroso del producto desde el corte en campo hasta la inspección final de despacho.",
       card4Title: "Exportación",
       card4Desc: "Preparados para atender requerimientos específicos de importadores y distribuidores internacionales."
+    },
+
+    clientsSection: {
+      badge: "Confianza Global",
+      title: "Nuestros Clientes y Socios Comerciales",
+      subtitle: "Establecemos alianzas comerciales sólidas y de largo plazo con importadores y distribuidores internacionales."
     },
 
     // Executive Summary Quick Access Cards
@@ -67,25 +73,41 @@ const translations = {
       navContactBtn: "Solicitar Cotización"
     },
 
+    // Product Hero Banner
+    productHero: {
+      badge: "OFERTA AGROEXPORTADORA PREMIUM",
+      title: "Espárrago Verde Fresco",
+      subtitle: "Cosechado a mano en el punto óptimo de madurez en los valles más fértiles del Perú. Hidroenfriado inmediatamente y transportado bajo estricta cadena de frío para garantizar máxima firmeza, color verde vibrante y vida útil superior en destino.",
+      pill1Label: "Variedad Botánica",
+      pill1Val: "Asparagus Officinalis L. (Verde Fresco)",
+      pill2Label: "Logística de Despacho",
+      pill2Val: "Vía Aérea y Marítima",
+      pill3Label: "Cadena de Frío",
+      pill3Val: "0.5°C a 2.0°C (33°F - 36°F)",
+      pill4Label: "Garantía de Calidad",
+      pill4Val: "Grado 100% Exportación",
+      ctaFormats: "Ver Formatos de Empaque"
+    },
+
     // The Product Section
     productSection: {
-      badge: "Ficha de Exportación",
-      title: "Nuestro espárrago",
-      intro: "Seleccionamos y preparamos espárragos destinados a compradores que buscan calidad, frescura y confiabilidad en cada embarque.",
+      badge: "Ficha de Exportación B2B",
+      title: "Especificaciones Técnicas",
+      intro: "Seleccionamos y procesamos espárragos destinados a compradores e importadores que exigen consistencia, frescura y cumplimiento en cada embarque.",
       specOriginTitle: "Origen",
-      specOriginVal: "Valles del Perú",
+      specOriginVal: "Valles de La Libertad y Ica, Perú",
       specTypeTitle: "Tipo de Producto",
       specTypeVal: "Espárrago verde fresco (Fresh Green Asparagus)",
-      specCaliberTitle: "Calibres",
-      specCaliberVal: "SM, STD, MD, LG, XL, JUMBO",
+      specCaliberTitle: "Calibres Disponibles",
+      specCaliberVal: "Small, Standard, Medium, Large, Extra Large, Jumbo",
       specFormatTitle: "Presentaciones",
-      specFormatVal: "12 X 420, 20 X 250, 10 X 520, 17 X 300.", 
+      specFormatVal: "Atados (Bunched), Bolsa Lonchera (Pouch), Flow Pack (Envoltura)",
       specWeightTitle: "Peso por caja",
-      specWeightVal: "5 kg / 11 lbs (aprox.), según presentación",
+      specWeightVal: "5 kg / 11 lbs (aprox. por caja de exportación)",
       specPackingTitle: "Tipo de empaque",
-      specPackingVal: "Caja de cartón corrugado grado exportación con atados, pads húmedos.",
-      specConservationTitle: "Conservación",
-      specConservationVal: "Cadena de frío continua (0.5°C a 2°C)",
+      specPackingVal: "Caja Polipropileno Alveolar / Cartón con pads de humedad",
+      specConservationTitle: "Conservación de Frío",
+      specConservationVal: "Hidroenfriado + Cadena de frío continua (0.5°C a 2°C)",
       ctaQuote: "Cotizar este producto"
     },
 
@@ -175,42 +197,42 @@ const translations = {
     // Presentations / Formats
     presentationsSection: {
       badge: "Formatos de Exportación",
-      title: "Presentaciones Solicitadas por nuestros Clientes",
+      title: "Formatos y Presentaciones de Exportación",
       subtitle: "Ofrecemos diversas opciones de empaque adaptables a las demandas de su canal de distribución.",
       zoomText: "Ver imagen completa",
-      card1Name: "Presentación Five Crowns",
-      card1Caliber: "Calibre: STD, MD",
-      card1Format: "Presentación: Esparrago verde fresco con tag five crowns",
+      card1Name: "Presentación Cajas con Atados (Bunched)",
+      card1Caliber: "Calibre: STD, MD, LG, XL, JUMBO",
+      card1Format: "Presentación: Espárrago verde fresco en atados seleccionados con liga",
       card1Weight: "Peso: Atado de 325 grs a 335 grs (aprox.) / Caja - 5 kg / 11 lbs",
       card1Packing: "Empaque: Caja de Polipropileno Alveolar grado exportación con pads húmedos",
       card1Btn: "Solicitar información",
 
-      card2Name: "Presentación Gourmet",
+      card2Name: "Presentación Gourmet (A Granel / Loose)",
       card2Caliber: "Calibre: SM, STD, MD, LG, XL, JUMBO",
-      card2Format: "Presentación: Esparrago verde fresco con tag Gourmet",
+      card2Format: "Presentación: Espárrago verde fresco a granel seleccionado con etiqueta Gourmet",
       card2Weight: "Peso: Caja - 5 kg / 11 lbs",
       card2Packing: "Empaque: Caja de Polipropileno Alveolar grado exportación con pads húmedos",
       card2Btn: "Solicitar información",
 
-      card3Name: "Presentacion Square",
+      card3Name: "Presentación Puntas Seleccionadas (Square 10x520)",
       card3Caliber: "Calibre: STD",
-      card3Format: "Presentación: Puntas de espárrago seleccionadas y cortadas con tag",
+      card3Format: "Presentación: Puntas de espárrago seleccionadas y cortadas con etiqueta",
       card3Weight: "Peso: Atado - 520 grs a 530 grs (aprox.)",
       card3Packing: "Empaque: Caja de Polipropileno Alveolar grado exportación con pads húmedos",
       card3Btn: "Solicitar información",
 
-      card5Name: "Presentación Lonchera Espaceite S.L",
+      card5Name: "Presentación Bolsa Lonchera (Pouch Bag)",
       card5Caliber: "Calibre: LG",
-      card5Format: "Presentación:Bajin de Espárrago fresco en bolsa de carton y colocada en una lonchera de 2.5 Kg",
+      card5Format: "Presentación: Espárrago fresco en bolsa protectora colocada en lonchera alveolar de 2.5 Kg",
       card5Weight: "Peso: Atado - 250 grs a 260 grs",
       card5Packing: "Empaque: Lonchera de Polipropileno Alveolar grado exportación",
       card5Btn: "Solicitar información",
 
-      card6Name: "Presentación Garcia Mateo & Sinova",
-      card6Caliber: "Calibre:  LG",
-      card6Format: "Presentación: Corte especial 17x300 mm con liga china",
+      card6Name: "Presentación Corte Especial 17x300",
+      card6Caliber: "Calibre: LG",
+      card6Format: "Presentación: Corte especial 17x300 mm con liga especial",
       card6Weight: "Peso: Atado - 300 grs a 310 grs",
-      card6Packing: "Empaque: caja de Polipropileno Alveolar grado exportación",
+      card6Packing: "Empaque: Caja de Polipropileno Alveolar grado exportación",
       card6Btn: "Solicitar información",
 
       card7Name: "Presentación Standard (STD 20x250)",
@@ -219,6 +241,20 @@ const translations = {
       card7Weight: "Peso: Atado - Según requerimiento / Caja exportación",
       card7Packing: "Empaque: Caja de Polipropileno Alveolar",
       card7Btn: "Solicitar información"
+    },
+
+    // Clients We Work With
+    clientsSection: {
+      badge: "Presencia Internacional",
+      title: "Clientes con los que Trabajamos",
+      subtitle: "Proveemos espárrago peruano de calidad de exportación a reconocidas empresas e importadores en los principales mercados globales.",
+      client1Desc: "Distribuidor e importador líder en el mercado norteamericano.",
+      client2Desc: "Importador especialista en vegetales frescos y líneas gourmet en Europa.",
+      client3Desc: "Referente en la distribución e importación de espárrago en la Unión Europea.",
+      client4Desc: "Productor y comercializador líder en el mercado norteamericano.",
+      client5Desc: "Cooperativa y distribuidor mayorista de hortalizas de primera calidad en España.",
+      client6Desc: "Comercializadora e importadora internacional de espárragos frescos.",
+      client7Desc: "Empresa importadora y distribuidora internacional de vegetales frescos."
     },
 
     // About Us
@@ -314,6 +350,20 @@ const translations = {
       closeBtn: "Cerrar"
     },
 
+    // Direct Contact Directory
+    directContacts: {
+      badge: "Atención Personalizada",
+      title: "Directorio de Contacto Directo",
+      subtitle: "Comunícate directamente con nuestros ejecutivos según tu área de consulta.",
+      roleGerencia: "Gerencia General",
+      waGerencia: "Contactar a Gerencia",
+      roleContabilidad: "Contabilidad & Administración",
+      waContabilidad: "Contactar a Contabilidad",
+      roleComercial: "Área Comercial",
+      waComercial: "Contactar a Comercial",
+      waDirect: "WhatsApp Directo"
+    },
+
     // Floating WhatsApp
     floatingWhatsApp: {
       text: "Hablar con un asesor"
@@ -323,7 +373,7 @@ const translations = {
     footer: {
       desc: "Exportación de espárrago fresco peruano de calidad premium para compradores internacionales.",
       quickLinks: "Navegación",
-      contactInfo: "Contacto Comercial",
+      contactInfo: "Contacto Directo",
       originBadge: "Hecho en Perú para el Mundo",
       rights: "Todos los derechos reservados."
     }
@@ -337,6 +387,7 @@ const translations = {
       interactive: "Explorer",
       process: "Process",
       quality: "Quality",
+      clients: "Clients",
       about: "About Us",
       contact: "Contact",
       cta: "Request a Quote",
@@ -345,12 +396,11 @@ const translations = {
 
     // Hero Section
     hero: {
-      badge: "Peruvian Agroexport Excellence",
-      title: "Peruvian asparagus for international markets",
-      subtitle: "Quality, freshness and commitment from origin to destination.",
+      tagline: "FROM PERUVIAN FIELDS TO THE WORLD",
+      title: "FRESH & PREMIUM QUALITY ASPARAGUS",
+      subtitle: "Grown and selected in the most fertile coastal valleys of Peru, we harvest top-tier green asparagus. Freshly cut from the field with peak freshness and export-grade quality, our asparagus is the ideal choice for global buyers and international importers.",
       ctaPrimary: "Request a Quote",
-      ctaSecondary: "Discover our product",
-      tagline: "From the Peruvian fields to global markets",
+      ctaSecondary: "View Products",
       statOrigin: "100% Peruvian Origin",
       statColdChain: "Controlled Cold Chain",
       statQuality: "Export-grade Standards"
@@ -368,6 +418,12 @@ const translations = {
       card3Desc: "Rigorous monitoring from harvest in the field to final pre-shipment dispatch inspection.",
       card4Title: "Export-ready",
       card4Desc: "Prepared to meet custom specifications of international importers, wholesalers, and supermarket distributors."
+    },
+
+    clientsSection: {
+      badge: "Global Trust",
+      title: "Our Clients & Commercial Partners",
+      subtitle: "We establish solid, long-term strategic relationships with international importers and distributors."
     },
 
     // Executive Summary Quick Access Cards
@@ -392,25 +448,41 @@ const translations = {
       navContactBtn: "Request a Quote"
     },
 
+    // Product Hero Banner
+    productHero: {
+      badge: "PREMIUM EXPORT OFFER",
+      title: "Fresh Green Asparagus",
+      subtitle: "Hand-harvested at peak maturity in the most fertile coastal valleys of Peru. Hydrocooled immediately and transported under strict cold chain management to ensure crisp spear firmness, vibrant green color, and superior shelf life at destination.",
+      pill1Label: "Botanical Variety",
+      pill1Val: "Asparagus Officinalis L. (Fresh Green)",
+      pill2Label: "Shipping Logistics",
+      pill2Val: "Air & Sea Freight Available",
+      pill3Label: "Cold Storage Chain",
+      pill3Val: "0.5°C to 2.0°C (33°F - 36°F)",
+      pill4Label: "Quality Assurance",
+      pill4Val: "100% Export Grade",
+      ctaFormats: "View Packaging Formats"
+    },
+
     // The Product Section
     productSection: {
-      badge: "Export Specification Sheet",
-      title: "Our asparagus",
-      intro: "We select and prepare premium asparagus tailored for buyers who demand quality, freshness, and reliability in every shipment.",
+      badge: "B2B Export Specification Sheet",
+      title: "Technical Specifications",
+      intro: "We harvest, grade, and package fresh asparagus tailored for buyers and importers demanding consistency, peak freshness, and on-time fulfillment.",
       specOriginTitle: "Origin",
-      specOriginVal: "Peruvian Agricultural Valleys",
+      specOriginVal: "La Libertad & Ica Valleys, Peru",
       specTypeTitle: "Product Type",
       specTypeVal: "Fresh Green Asparagus",
       specCaliberTitle: "Available Calibers",
-      specCaliberVal: "[AVAILABLE CALIBERS / SIZES]",
+      specCaliberVal: "Small, Standard, Medium, Large, Extra Large, Jumbo",
       specFormatTitle: "Presentations",
-      specFormatVal: "[PRESENTATIONS / PACKAGING FORMATS]",
+      specFormatVal: "Bunched (With band), Lunchbox Pouch, Flow Pack (Wrapped)",
       specWeightTitle: "Weight per box",
-      specWeightVal: "[WEIGHT PER BOX]",
+      specWeightVal: "5 kg / 11 lbs (approx. per export box)",
       specPackingTitle: "Packaging type",
-      specPackingVal: "[PACKAGING TYPE]",
+      specPackingVal: "Polypropylene / Corrugated Export Box with moisture pads",
       specConservationTitle: "Cold Storage",
-      specConservationVal: "Continuous cold chain (0.5°C to 2°C / 33°F to 36°F)",
+      specConservationVal: "Hydrocooled + Continuous cold chain (0.5°C to 2°C / 33°F - 36°F)",
       ctaQuote: "Request quote for this product"
     },
 
@@ -500,42 +572,42 @@ const translations = {
     // Presentations / Formats
     presentationsSection: {
       badge: "Export Formats",
-      title: "Available presentations",
+      title: "Export Formats & Packaging",
       subtitle: "We offer versatile packaging options tailored to your distribution channels and retail requirements.",
       zoomText: "View full image",
       card1Name: "Bunched Format in Export Boxes",
-      card1Caliber: "Caliber: [AVAILABLE CALIBERS]",
-      card1Format: "Presentation: [PRESENTATIONS - E.G. ELASTIC BANDED BUNCHES]",
-      card1Weight: "Weight: [WEIGHT PER BOX - E.G. 5 KG / 11 LBS]",
-      card1Packing: "Packaging: [PACKAGING TYPE - CORRUGATED EXPORT BOX]",
+      card1Caliber: "Caliber: STD, MD, LG, XL, JUMBO",
+      card1Format: "Presentation: Fresh green asparagus in selected elastic banded bunches",
+      card1Weight: "Weight: 325g to 335g per bunch / Box - 5 kg / 11 lbs",
+      card1Packing: "Packaging: Polypropylene / Corrugated Export Box with moisture pads",
       card1Btn: "Inquire about format",
 
-      card2Name: "Loose / Bulk Format",
-      card2Caliber: "Caliber: [AVAILABLE CALIBERS]",
-      card2Format: "Presentation: [PRESENTATIONS - SELECTED BULK / LOOSE]",
-      card2Weight: "Weight: [WEIGHT PER BOX - AS PER CUSTOMER REQUIREMENT]",
-      card2Packing: "Packaging: [PACKAGING TYPE - TELESCOPIC OR PLASTIC CRATE]",
+      card2Name: "Gourmet Loose / Bulk Format",
+      card2Caliber: "Caliber: SM, STD, MD, LG, XL, JUMBO",
+      card2Format: "Presentation: Fresh green asparagus selected loose with Gourmet tag",
+      card2Weight: "Weight: Box - 5 kg / 11 lbs",
+      card2Packing: "Packaging: Polypropylene Export Box with moisture pads",
       card2Btn: "Inquire about format",
 
-      card3Name: "Asparagus Tips Format",
-      card3Caliber: "Caliber: [AVAILABLE CALIBERS]",
-      card3Format: "Presentation: [PRESENTATIONS - TRIMMED SELECT TIPS]",
-      card3Weight: "Weight: [WEIGHT PER BOX - AS PER CUSTOMER REQUIREMENT]",
-      card3Packing: "Packaging: [PACKAGING TYPE - FLOW PACK / BOX]",
+      card3Name: "Selected Asparagus Tips (Square 10x520)",
+      card3Caliber: "Caliber: STD",
+      card3Format: "Presentation: Trimmed select asparagus tips with brand tag",
+      card3Weight: "Weight: Bunch - 520g to 530g approx.",
+      card3Packing: "Packaging: Polypropylene Export Box with moisture pads",
       card3Btn: "Inquire about format",
 
       card5Name: "Pouch / Lunchbox Bag Presentation",
-      card5Caliber: "Caliber: [AVAILABLE CALIBERS]",
-      card5Format: "Presentation: [PRESENTATIONS - LUNCHBOX BAG / POUCH]",
-      card5Weight: "Weight: [WEIGHT PER BAG / BOX - AS PER REQUIREMENT]",
-      card5Packing: "Packaging: [PACKAGING TYPE - MAP POUCH / MASTER BOX]",
+      card5Caliber: "Caliber: LG",
+      card5Format: "Presentation: Fresh asparagus in protective pouch bag placed in 2.5 kg lunchbox",
+      card5Weight: "Weight: Bunch - 250g to 260g",
+      card5Packing: "Packaging: Export-grade Polypropylene Lunchbox Crate",
       card5Btn: "Inquire about format",
 
-      card6Name: "17x300 Presentation (Special Cut & Format)",
-      card6Caliber: "Caliber: [AVAILABLE CALIBERS]",
-      card6Format: "Presentation: [PRESENTATIONS - SPECIAL CUT 17x300 MM]",
-      card6Weight: "Weight: [WEIGHT PER BOX / PACK - AS PER REQUIREMENT]",
-      card6Packing: "Packaging: [PACKAGING TYPE - EXPORT BOX / MAP]",
+      card6Name: "Special Cut 17x300 Presentation",
+      card6Caliber: "Caliber: LG",
+      card6Format: "Presentation: Special cut 17x300 mm with custom elastic band",
+      card6Weight: "Weight: Bunch - 300g to 310g",
+      card6Packing: "Packaging: Polypropylene Export Box",
       card6Btn: "Inquire about format",
 
       card7Name: "Standard Presentation (STD 20x250)",
@@ -544,6 +616,20 @@ const translations = {
       card7Weight: "Weight: Bunch - As per requirement / Export Box",
       card7Packing: "Packaging: Corrugated / Polypropylene Export Box",
       card7Btn: "Inquire about format"
+    },
+
+    // Clients We Work With
+    clientsSection: {
+      badge: "Global Presence",
+      title: "Clients We Work With",
+      subtitle: "We supply export-quality Peruvian asparagus to recognized importers and buyers across major global markets.",
+      client1Desc: "Leading importer and distributor in the North American market.",
+      client2Desc: "Specialized fresh produce importer for premium lines in Europe.",
+      client3Desc: "Benchmark importer and distributor for fresh asparagus in the EU.",
+      client4Desc: "Leading grower and distributor in the North American produce market.",
+      client5Desc: "Major fresh produce cooperative and wholesaler in Spain.",
+      client6Desc: "International marketer and importer of fresh green asparagus.",
+      client7Desc: "Global fresh vegetable importer and distributor."
     },
 
     // About Us
@@ -639,6 +725,20 @@ const translations = {
       closeBtn: "Close"
     },
 
+    // Direct Contact Directory
+    directContacts: {
+      badge: "Personalized Support",
+      title: "Direct Contact Directory",
+      subtitle: "Get in touch directly with our key team members for your specific inquiries.",
+      roleGerencia: "General Management",
+      waGerencia: "Contact Management",
+      roleContabilidad: "Accounting & Administration",
+      waContabilidad: "Contact Accounting",
+      roleComercial: "Commercial & Sales Department",
+      waComercial: "Contact Sales",
+      waDirect: "Direct WhatsApp"
+    },
+
     // Floating WhatsApp
     floatingWhatsApp: {
       text: "Chat with an advisor"
@@ -648,7 +748,7 @@ const translations = {
     footer: {
       desc: "Premium fresh Peruvian asparagus export supplier for global wholesale and retail buyers.",
       quickLinks: "Quick Navigation",
-      contactInfo: "Commercial Inquiries",
+      contactInfo: "Direct Contacts",
       originBadge: "Grown in Peru for the World",
       rights: "All rights reserved."
     }
