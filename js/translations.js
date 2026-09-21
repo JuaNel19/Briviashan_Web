@@ -92,7 +92,7 @@ const translations = {
       title: "Especificaciones Técnicas",
       intro: "Seleccionamos y procesamos espárragos destinados a compradores e importadores que exigen consistencia, frescura y cumplimiento en cada embarque.",
       specOriginTitle: "Origen",
-      specOriginVal: "Valles de La Libertad y Ica, Perú",
+      specOriginVal: "Valles de La Libertad",
       specTypeTitle: "Tipo de Producto",
       specTypeVal: "Espárrago verde fresco (Fresh Green Asparagus)",
       specCaliberTitle: "Calibres Disponibles",
@@ -211,13 +211,6 @@ const translations = {
       card2Packing: "Empaque: Caja de Polipropileno Alveolar grado exportación con pads húmedos",
       card2Btn: "Solicitar información",
 
-      card3Name: "Presentación Puntas Seleccionadas (Square 10x520)",
-      card3Caliber: "Calibre: STD",
-      card3Format: "Presentación: Puntas de espárrago seleccionadas y cortadas con etiqueta",
-      card3Weight: "Peso: Atado - 520 grs a 530 grs (aprox.)",
-      card3Packing: "Empaque: Caja de Polipropileno Alveolar grado exportación con pads húmedos",
-      card3Btn: "Solicitar información",
-
       card5Name: "Presentación Bolsa Lonchera (Pouch Bag)",
       card5Caliber: "Calibre: LG",
       card5Format: "Presentación: Espárrago fresco en bolsa protectora colocada en lonchera alveolar de 2.5 Kg",
@@ -225,7 +218,7 @@ const translations = {
       card5Packing: "Empaque: Lonchera de Polipropileno Alveolar grado exportación",
       card5Btn: "Solicitar información",
 
-      card6Name: "Presentación Corte Especial 17x300",
+      card6Name: "Presentación Corte Especial",
       card6Caliber: "Calibre: LG",
       card6Format: "Presentación: Corte especial 17x300 mm con liga especial",
       card6Weight: "Peso: Atado - 300 grs a 310 grs",
@@ -264,7 +257,7 @@ const translations = {
       imageCaption: "Cosecha de espárragos frescos en campos de la costa peruana",
       
       // KPIs
-      stat1Num: "14+",
+      stat1Num: "1+",
       stat1Title: "Años de Trayectoria",
       stat1Desc: "Experiencia acumulada en la agroexportación peruana",
       stat2Num: "100%",
