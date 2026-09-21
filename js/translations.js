@@ -21,14 +21,11 @@ const translations = {
 
     // Hero Section
     hero: {
-      tagline: "DEL CAMPO PERUANO AL MUNDO",
-      title: "ESPÁRRAGO FRESCO Y DE CALIDAD",
-      subtitle: "Cultivados y seleccionados en los valles más fértiles del Perú, cosechamos espárragos verdes de calidad superior. Recién cortados del campo, de calidad y frescura excelentes, nuestros espárragos son el complemento ideal para compradores e importadores internacionales.",
-      ctaPrimary: "Solicitar cotización",
-      ctaSecondary: "Ver Productos",
-      statOrigin: "Origen 100% Peruano",
-      statColdChain: "Cadena de frío controlada",
-      statQuality: "Estándares de exportación"
+      tagline: "🌿 BRIVIASHAN AGROEXPORTACIONES",
+      title: "Espárrago Verde Fresco de Exportación Premium",
+      subtitle: "Cosechados y seleccionados en los valles más fértiles del Perú. Procesamos y exportamos espárragos frescos con estrictos estándares de calidad, frescura y trazabilidad para compradores e importadores globales.",
+      ctaPrimary: "Solicitar Cotización",
+      ctaSecondary: "Ver Presentaciones"
     },
 
     // Value Proposition
@@ -396,14 +393,11 @@ const translations = {
 
     // Hero Section
     hero: {
-      tagline: "FROM PERUVIAN FIELDS TO THE WORLD",
-      title: "FRESH & PREMIUM QUALITY ASPARAGUS",
-      subtitle: "Grown and selected in the most fertile coastal valleys of Peru, we harvest top-tier green asparagus. Freshly cut from the field with peak freshness and export-grade quality, our asparagus is the ideal choice for global buyers and international importers.",
+      tagline: "🌿 BRIVIASHAN AGROEXPORTS",
+      title: "Fresh Green Asparagus Premium Export Grade",
+      subtitle: "Harvested and selected in the fertile valleys of Peru. We process and export fresh asparagus adhering to strict international quality, cold chain, and traceability standards for global importers.",
       ctaPrimary: "Request a Quote",
-      ctaSecondary: "View Products",
-      statOrigin: "100% Peruvian Origin",
-      statColdChain: "Controlled Cold Chain",
-      statQuality: "Export-grade Standards"
+      ctaSecondary: "View Presentations"
     },
 
     // Value Proposition

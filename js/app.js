@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (activeViewId !== 'view-inicio' || window.scrollY > 40) {
         header.classList.add('scrolled');
       } else {
-        header.classList.remove('scrolled');
+        // header.classList.remove('scrolled'); // Force white header
       }
     }
   }
@@ -513,8 +513,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // If targetView doesn't exist directly, map known section hashes
     if (!targetView) {
       const sectionToView = {
-        '#explorador': '#view-producto',
-        '#producto': '#view-producto',
         '#proceso': '#view-proceso',
         '#calidad': '#view-calidad',
         '#nosotros': '#view-nosotros',
@@ -881,4 +879,104 @@ document.addEventListener('DOMContentLoaded', () => {
   initTechSpecGallery();
   const initialHash = window.location.hash || '#inicio';
   switchView(initialHash);
+});
+
+/* ==========================================================================
+   HERO PRESENTATIONS SLIDER LOGIC
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  const btnPrev = document.getElementById('hero-slider-prev');
+  const btnNext = document.getElementById('hero-slider-next');
+  
+  if (slides.length === 0) return;
+
+  let currentIndex = 0;
+  let autoplayInterval;
+
+  function updateSlider(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    
+    slides[index].classList.add('active');
+    if (dots[index]) dots[index].classList.add('active');
+    
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    let nextIndex = (currentIndex + 1) % slides.length;
+    updateSlider(nextIndex);
+  }
+
+  function prevSlide() {
+    let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider(prevIndex);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayInterval = setInterval(nextSlide, 6000);
+  }
+
+  function stopAutoplay() {
+    if (autoplayInterval) clearInterval(autoplayInterval);
+  }
+
+  if (btnNext) {
+    btnNext.addEventListener('click', () => {
+      nextSlide();
+      startAutoplay();
+    });
+  }
+
+  if (btnPrev) {
+    btnPrev.addEventListener('click', () => {
+      prevSlide();
+      startAutoplay();
+    });
+  }
+
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      updateSlider(idx);
+      startAutoplay();
+    });
+  });
+
+  const sliderContainer = document.querySelector('.hero-presentations-slider');
+  if (sliderContainer) {
+    sliderContainer.addEventListener('mouseenter', stopAutoplay);
+    sliderContainer.addEventListener('mouseleave', startAutoplay);
+  }
+
+  startAutoplay();
+
+  /* Modal Trigger Logic */
+  const modal = document.getElementById('product-detail-modal');
+  const modalImg = document.getElementById('prod-modal-img');
+  const modalTitle = document.getElementById('prod-modal-title');
+  const modalDesc = document.getElementById('prod-modal-desc');
+  const modalWeight = document.getElementById('prod-modal-weight');
+  const modalCaliber = document.getElementById('prod-modal-caliber');
+  const modalPacking = document.getElementById('prod-modal-packing');
+
+  document.querySelectorAll('.hero-slide .hero-slide-bg').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const slide = e.target.closest('.hero-slide');
+      if (slide && modal) {
+        if(modalImg) modalImg.src = slide.dataset.img || '';
+        if(modalTitle) modalTitle.textContent = slide.dataset.title || '';
+        if(modalDesc) modalDesc.textContent = slide.dataset.desc || '';
+        if(modalWeight) modalWeight.textContent = slide.dataset.weight || '';
+        if(modalCaliber) modalCaliber.textContent = slide.dataset.caliber || '';
+        if(modalPacking) modalPacking.textContent = slide.dataset.packing || '';
+        
+        modal.classList.add('is-visible', 'is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
 });
