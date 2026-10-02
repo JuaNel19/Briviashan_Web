@@ -523,7 +523,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mappedId) {
         targetView = document.querySelector(mappedId);
         viewId = mappedId;
-      } else {
+      }
+      if (!targetView) {
         targetView = document.querySelector('#view-inicio');
         viewId = '#view-inicio';
       }
@@ -980,3 +981,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
