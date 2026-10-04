@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. Connect Presentation "Solicitar información" Buttons to Form Selection
   const presentationButtons = document.querySelectorAll('.presentation-inquire-btn');
-  const productSelect = document.getElementById('product-select');
+  const productSelect = document.getElementById('product-input');
   const quoteFormSection = document.getElementById('contacto');
 
   presentationButtons.forEach(btn => {
@@ -981,4 +981,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 
