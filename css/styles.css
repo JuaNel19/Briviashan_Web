@@ -5022,7 +5022,16 @@ textarea.form-control {
 
 @media (max-width: 768px) {
   .hero-nav { display: none; }
-  .hero-slide-title { font-size: 3rem; }
+  .hero-slide-title { font-size: 2.5rem; }
+  
+  /* Ajuste para imágenes panorámicas en celular */
+  .hero-presentations-slider {
+    height: 500px;
+    min-height: 400px;
+  }
+  .hero-slide-bg {
+    background-position: center center;
+  }
 }
 
 /* Ensure view content starts below fixed white header */
