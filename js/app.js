@@ -963,8 +963,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalCaliber = document.getElementById('prod-modal-caliber');
   const modalPacking = document.getElementById('prod-modal-packing');
 
-  document.querySelectorAll('.hero-slide .hero-slide-bg').forEach(el => {
+  document.querySelectorAll('.hero-slide .hero-slide-bg, .hero-slide .open-detail-btn').forEach(el => {
     el.addEventListener('click', (e) => {
+      e.stopPropagation();
       const slide = e.target.closest('.hero-slide');
       if (slide && modal) {
         if(modalImg) modalImg.src = slide.dataset.img || '';
