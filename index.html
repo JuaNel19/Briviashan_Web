@@ -594,97 +594,117 @@
 
   <!-- VISTA CONTACTO -->
   <div class="site-view view-bg-contacto" id="view-contacto">
-  <!-- ==========================================================================
-       13. B2B QUOTATION FORM
-       ========================================================================== -->
-  <section class="rfq-section" id="contacto">
-    <div class="container">
-      <div class="rfq-card reveal-on-scroll">
-        <div class="section-header" style="margin-bottom: 2rem;">
-          <span class="section-badge" data-i18n="nav.contact">Contacto</span>
-          <h2 class="section-title" data-i18n="formSection.title">Formulario de Cotización Internacional</h2>
-          <p class="section-subtitle" data-i18n="formSection.subtitle">
-            Complete los datos a continuación para recibir información de disponibilidad, calibres y cotizaciones.
-          </p>
-        </div>
-
-        <form id="rfq-form" action="php/contact.php" method="POST">
-          <div class="form-grid">
-            <!-- Full Name -->
-            <div>
-              <label for="name" class="form-label" data-i18n="formSection.fieldName">Nombre completo</label>
-              <input type="text" id="name" name="name" class="form-control" placeholder="Ej. John Miller / Carlos Mendoza" data-i18n-placeholder="formSection.placeholderName" required>
-            </div>
-
-            <!-- Company -->
-            <div>
-              <label for="company" class="form-label" data-i18n="formSection.fieldCompany">Empresa / Importadora</label>
-              <input type="text" id="company" name="company" class="form-control" placeholder="Nombre de su empresa" data-i18n-placeholder="formSection.placeholderCompany" required>
-            </div>
-
-            <!-- Destination Country -->
-            <div>
-              <label for="country" class="form-label" data-i18n="formSection.fieldCountry">País de destino</label>
-              <input type="text" id="country" name="country" class="form-control" placeholder="Ej. Estados Unidos, España..." data-i18n-placeholder="formSection.placeholderCountry" required>
-            </div>
-
-            <!-- Corporate Email -->
-            <div>
-              <label for="email" class="form-label" data-i18n="formSection.fieldEmail">Correo electrónico corporativo</label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="nombre@empresa.com" data-i18n-placeholder="formSection.placeholderEmail" required>
-            </div>
-
-            <!-- WhatsApp / Phone -->
-            <div>
-              <label for="phone" class="form-label" data-i18n="formSection.fieldPhone">WhatsApp / Teléfono de contacto</label>
-              <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 (555) 000-0000" data-i18n-placeholder="formSection.placeholderPhone" required>
-            </div>
-
-            <!-- Product / Presentation Input -->
-            <div>
-              <label for="product-input" class="form-label" data-i18n="formSection.fieldProduct">Producto o presentación de interés</label>
-              <input type="text" id="product-input" name="product" class="form-control" placeholder="Ej. Espárrago verde 12x420 / Calibre XL" data-i18n-placeholder="formSection.placeholderProduct" required>
-            </div>
-
-            <!-- Quantity -->
-            <div class="form-group-full">
-              <label for="quantity" class="form-label" data-i18n="formSection.fieldQuantity">Cantidad requerida estimada</label>
-              <input type="text" id="quantity" name="quantity" class="form-control" placeholder="Ej. 1 contenedor / pallets / cajas por semana" data-i18n-placeholder="formSection.placeholderQuantity" required>
-            </div>
-
-            <!-- Message -->
-            <div class="form-group-full">
-              <label for="message" class="form-label" data-i18n="formSection.fieldMessage">Mensaje o requerimientos específicos</label>
-              <textarea id="message" name="message" class="form-control" placeholder="Indique calibres requeridos, Incoterm preferido (FOB, CIF), ventana de entrega o dudas..." data-i18n-placeholder="formSection.placeholderMessage"></textarea>
-            </div>
-
-            <!-- Submit Button -->
-            <div class="form-submit-container">
-              <button type="submit" class="btn btn-gold" style="width: 100%; max-width: 380px;" data-i18n="formSection.btnSubmit">
-                Solicitar cotización
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-
-
-
+    <!-- Banner Superior de Campos de Cultivo -->
+    <div class="contact-hero-banner">
+      <img decoding="async" src="images-asparagus/fondo3.webp" alt="Campos de cultivo de espárragos BRIVIASHAN" class="contact-banner-img">
     </div>
-  </section>
 
+    <!-- Sección de Información de Contacto y Formulario Simple -->
+    <section class="simple-contact-section" id="contacto">
+      <div class="container">
+        <div class="simple-contact-grid">
+          
+          <!-- Columna Izquierda: Información de Oficinas / Ubicaciones -->
+          <div class="contact-info-col reveal-on-scroll">
+            
+            <!-- Oficina Principal / Planta Paiján -->
+            <div class="office-card">
+              <h3 class="office-title">Oficina  Paiján</h3>
+              <ul class="office-details-list">
+                <li class="office-detail-item">
+                  <svg class="office-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>C.P. Macabi Bajo Mz. B Lt. 02 Paiján, Ascope – La Libertad, Perú</span>
+                </li>
+                <li class="office-detail-item">
+                  <svg class="office-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <a href="tel:+51926640784" class="office-link">+51 926 640 784</a>
+                </li>
+                <li class="office-detail-item">
+                  <svg class="office-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  <a href="mailto:gerencia@briviashan.com" class="office-link">gerencia@briviashan.com</a>
+                </li>
+                <li class="office-detail-item">
+                  <svg class="office-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  <a href="mailto:exportaciones@briviashan.com" class="office-link">exportaciones@briviashan.com</a>
+                </li>
+              </ul>
+            </div>
 
-  <!-- ==========================================================================
-       14. FLOATING WHATSAPP BUTTON
-       ========================================================================== -->
-  <a href="#" class="floating-whatsapp whatsapp-dynamic-link" aria-label="Hablar con un asesor comercial en WhatsApp">
-    <svg class="floating-whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-    </svg>
-    <span data-i18n="floatingWhatsApp.text">Hablar con un asesor</span>
-  </a>
+            <!-- Oficina Administración & Finanzas -->
+            <div class="office-card">
+              <h3 class="office-title">Oficina Trujillo</h3>
+              <ul class="office-details-list">
+                <li class="office-detail-item">
+                  <svg class="office-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>La Libertad – Perú</span>
+                </li>
+                <li class="office-detail-item">
+                  <svg class="office-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <a href="tel:+51949068554" class="office-link">+51 949 068 554</a>
+                </li>
+                <li class="office-detail-item">
+                  <svg class="office-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  <a href="mailto:contabilidad@briviashan.com" class="office-link">contabilidad@briviashan.com</a>
+                </li>
+              </ul>
+            </div>
 
+          </div>
 
+          <!-- Columna Derecha: Formulario Limpio y Sencillo -->
+          <div class="contact-form-col reveal-on-scroll">
+            <p class="simple-form-instruction" data-i18n="formSection.instruction">
+              Para mayor información, consultas o dudas, por favor complete el siguiente formulario y nos pondremos en contacto con usted.
+            </p>
+
+            <form id="rfq-form" action="php/contact.php" method="POST" class="simple-contact-form">
+              <div class="simple-form-group">
+                <input type="text" id="name" name="name" class="simple-form-input" placeholder="Nombres y Apellidos" data-i18n-placeholder="formSection.placeholderNameSimple" required>
+              </div>
+
+              <div class="simple-form-group">
+                <input type="email" id="email" name="email" class="simple-form-input" placeholder="Correo electrónico" data-i18n-placeholder="formSection.placeholderEmailSimple" required>
+              </div>
+
+              <div class="simple-form-group">
+                <input type="tel" id="phone" name="phone" class="simple-form-input" placeholder="Teléfono" data-i18n-placeholder="formSection.placeholderPhoneSimple" required>
+              </div>
+
+              <div class="simple-form-group">
+                <textarea id="message" name="message" class="simple-form-input simple-form-textarea" placeholder="Ingresa tu mensaje aquí" data-i18n-placeholder="formSection.placeholderMessageSimple" rows="5" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-simple-send" data-i18n="formSection.btnSend">
+                Enviar
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="#" class="floating-whatsapp whatsapp-dynamic-link" aria-label="Hablar con un asesor comercial en WhatsApp">
+      <svg class="floating-whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+      <span data-i18n="floatingWhatsApp.text">Hablar con un asesor</span>
+    </a>
   </div><!-- /#view-contacto -->
   </main><!-- /.views-wrapper -->
 

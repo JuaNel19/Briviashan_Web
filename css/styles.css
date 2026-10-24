@@ -5053,4 +5053,236 @@ textarea.form-control {
   }
 }
 
+/* ==========================================================================
+   SIMPLE REDESIGNED CONTACT SECTION (INSPIRED BY REFERENCE)
+   ========================================================================== */
+.view-bg-contacto {
+  background: #ffffff !important;
+  background-image: none !important;
+  min-height: 100vh;
+  padding-top: 130px !important;
+  padding-bottom: 5rem;
+}
+
+.contact-hero-banner {
+  width: 100%;
+  height: 280px;
+  max-height: 35vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #0c2b18;
+}
+
+.contact-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+
+.simple-contact-section {
+  background-color: #ffffff;
+  padding: 4.5rem 0 5rem;
+}
+
+.simple-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Left Column: Offices */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.office-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.view-bg-contacto .office-title {
+  font-size: 1.85rem !important;
+  font-weight: 700 !important;
+  color: #0c4d28 !important;
+  text-shadow: none !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.office-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.view-bg-contacto .office-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  font-size: 1.05rem !important;
+  color: #222222 !important;
+  text-shadow: none !important;
+  font-weight: 400 !important;
+  line-height: 1.55;
+}
+
+.office-icon {
+  width: 20px;
+  height: 20px;
+  color: #0c4d28;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.view-bg-contacto .office-detail-item span {
+  color: #222222 !important;
+  text-shadow: none !important;
+  font-weight: 400 !important;
+}
+
+.view-bg-contacto .office-link {
+  color: #222222 !important;
+  text-shadow: none !important;
+  font-weight: 400 !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.view-bg-contacto .office-link:hover {
+  color: #0c803e !important;
+  text-decoration: underline;
+}
+
+/* Right Column: Simple Form */
+.contact-form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.view-bg-contacto .simple-form-instruction {
+  font-size: 1.05rem !important;
+  color: #222222 !important;
+  text-shadow: none !important;
+  font-weight: 400 !important;
+  line-height: 1.55;
+  margin-bottom: 1.85rem;
+}
+
+.simple-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.simple-form-group {
+  width: 100%;
+}
+
+.simple-form-input {
+  width: 100%;
+  padding: 0.95rem 1.15rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  border: 1px solid #d5dbd7;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.simple-form-input::placeholder {
+  color: #8c9691;
+  font-size: 0.98rem;
+}
+
+.simple-form-input:focus {
+  border-color: #0c803e;
+  box-shadow: 0 0 0 3px rgba(12, 128, 62, 0.12);
+}
+
+.simple-form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.btn-simple-send {
+  width: 100%;
+  padding: 0.95rem 1.5rem;
+  background-color: #0c803e;
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(12, 128, 62, 0.2);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-simple-send:hover {
+  background-color: #096832;
+  box-shadow: 0 4px 14px rgba(12, 128, 62, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn-simple-send:active {
+  transform: translateY(0);
+}
+
+.btn-simple-send:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsiveness for Simple Contact */
+@media (max-width: 900px) {
+  .simple-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .contact-hero-banner {
+    height: 200px;
+  }
+  .simple-contact-section {
+    padding: 3.5rem 0 5rem;
+  }
+  .view-bg-contacto .office-title {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero-banner {
+    height: 150px;
+  }
+  .simple-contact-section {
+    padding: 2.5rem 0 4rem;
+  }
+  .contact-info-col {
+    gap: 2.5rem;
+  }
+  .view-bg-contacto .office-title {
+    font-size: 1.45rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .view-bg-contacto .office-detail-item {
+    font-size: 0.98rem !important;
+  }
+}
+
 

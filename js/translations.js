@@ -308,7 +308,13 @@ const translations = {
 
     // RFQ Form
     formSection: {
-      title: "Formulario de Cotización Internacional",
+      instruction: "Para mayor información, consultas o dudas, por favor complete el siguiente formulario y nos pondremos en contacto con usted.",
+      placeholderNameSimple: "Nombres y Apellidos",
+      placeholderEmailSimple: "Correo electrónico",
+      placeholderPhoneSimple: "Teléfono",
+      placeholderMessageSimple: "Ingresa tu mensaje aquí",
+      btnSend: "Enviar",
+      title: "Formulario de Contacto",
       subtitle: "Complete los datos a continuación para recibir información de disponibilidad, calibres y cotizaciones.",
       fieldName: "Nombre completo",
       placeholderName: "Ej. John Miller / Carlos Mendoza",
@@ -334,9 +340,9 @@ const translations = {
       fieldMessage: "Mensaje o requerimientos específicos",
       placeholderMessage: "Indique calibres requeridos, Incoterm preferido (FOB, CIF), ventana de entrega o dudas...",
       btnSubmit: "Solicitar cotización",
-      submitting: "Enviando solicitud...",
-      successTitle: "¡Solicitud enviada con éxito!",
-      successMessage: "Gracias por contactarnos. Nuestro equipo comercial revisará su solicitud y se pondrá en contacto con usted en breve.",
+      submitting: "Enviando...",
+      successTitle: "¡Mensaje enviado con éxito!",
+      successMessage: "Gracias por contactarnos. Nuestro equipo comercial se pondrá en contacto con usted a la brevedad.",
       closeBtn: "Cerrar"
     },
 
@@ -680,7 +686,13 @@ const translations = {
 
     // RFQ Form
     formSection: {
-      title: "International Request for Quote (RFQ)",
+      instruction: "For further information, inquiries or questions, please complete the following form and we will get in touch with you.",
+      placeholderNameSimple: "Full Name",
+      placeholderEmailSimple: "Email Address",
+      placeholderPhoneSimple: "Phone Number",
+      placeholderMessageSimple: "Enter your message here",
+      btnSend: "Send",
+      title: "Contact Form",
       subtitle: "Fill out the details below to receive availability, specifications, and commercial pricing.",
       fieldName: "Full Name",
       placeholderName: "E.g. John Miller / Carlos Mendoza",
@@ -706,9 +718,9 @@ const translations = {
       fieldMessage: "Specific Requirements or Inquiries",
       placeholderMessage: "Specify desired calibers, preferred Incoterm (FOB, CIF), delivery window, or questions...",
       btnSubmit: "Submit Quote Request",
-      submitting: "Submitting request...",
-      successTitle: "Quote Request Sent Successfully!",
-      successMessage: "Thank you for contacting us. Our commercial export team will review your requirements and reach out to you shortly.",
+      submitting: "Sending...",
+      successTitle: "Message Sent Successfully!",
+      successMessage: "Thank you for contacting us. Our commercial export team will reach out to you shortly.",
       closeBtn: "Close"
     },
 

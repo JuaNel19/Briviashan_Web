@@ -29,19 +29,19 @@ if (!$name || !$email) {
 
 // 2. Configurar correo de destino en tu cPanel (Cambia este correo por el tuyo)
 $to = "gerencia@briviashan.com";
-$subject = "=?UTF-8?B?" . base64_encode("Nueva Cotización Internacional - " . $name) . "?=";
+$subject = "=?UTF-8?B?" . base64_encode("Nuevo Mensaje de Contacto - " . $name) . "?=";
 
 // 3. Construir mensaje en texto plano
-$body  = "NUEVA SOLICITUD DE COTIZACIÓN INTERNACIONAL - BRIVIASHAN\n";
+$body  = "NUEVO MENSAJE DE CONTACTO WEB - BRIVIASHAN\n";
 $body .= "=======================================================\n\n";
 $body .= "Nombre Completo: " . $name . "\n";
-$body .= "Empresa / Importadora: " . $company . "\n";
-$body .= "País de Destino: " . $country . "\n";
-$body .= "Correo Corporativo: " . $email . "\n";
-$body .= "WhatsApp / Teléfono: " . $phone . "\n";
-$body .= "Producto / Presentación: " . $product . "\n";
-$body .= "Cantidad Estimada: " . $quantity . "\n\n";
-$body .= "Mensaje / Requerimientos:\n" . $message . "\n\n";
+if (!empty($company))  $body .= "Empresa / Importadora: " . $company . "\n";
+if (!empty($country))  $body .= "País de Destino: " . $country . "\n";
+$body .= "Correo Electrónico: " . $email . "\n";
+$body .= "Teléfono / WhatsApp: " . $phone . "\n";
+if (!empty($product))  $body .= "Producto / Presentación: " . $product . "\n";
+if (!empty($quantity)) $body .= "Cantidad Estimada: " . $quantity . "\n";
+$body .= "\nMensaje / Consulta:\n" . $message . "\n\n";
 $body .= "-------------------------------------------------------\n";
 $body .= "Enviado desde el sitio web oficial https://" . $_SERVER['HTTP_HOST'] . "\n";
 
