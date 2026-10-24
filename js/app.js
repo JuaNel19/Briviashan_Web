@@ -562,6 +562,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (viewId === '#view-nosotros') {
       setTimeout(triggerKpiCounters, 200);
     }
+
+    // Toggle minimal footer for Contacto view
+    if (viewId === '#view-contacto') {
+      document.body.classList.add('in-contact-view');
+    } else {
+      document.body.classList.remove('in-contact-view');
+    }
   }
 
   // Handle clicks on all links with href starting with '#'
@@ -982,5 +989,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 
 

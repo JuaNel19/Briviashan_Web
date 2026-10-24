@@ -5285,4 +5285,23 @@ textarea.form-control {
   }
 }
 
+/* Minimal Footer for Contact View (Hide large footer-grid, keep only copyright bar) */
+body.in-contact-view .main-footer .footer-grid,
+body:has(#view-contacto.is-active) .main-footer .footer-grid {
+  display: none !important;
+}
+
+body.in-contact-view .main-footer,
+body:has(#view-contacto.is-active) .main-footer {
+  padding: 1.5rem 0 2rem 0 !important;
+  border-top: 1px solid var(--color-border);
+  box-shadow: none !important;
+}
+
+body.in-contact-view .footer-bottom,
+body:has(#view-contacto.is-active) .footer-bottom {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+
 
